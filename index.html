@@ -19,7 +19,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="assets/img/hero-1200.webp" imagesrcset="assets/img/hero-1200.webp 1200w, assets/img/hero-2000.webp 2000w" imagesizes="100vw" fetchpriority="high">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Denise Mota Arquitetura","description":"Projetos residenciais de arquitetura e interiores, presencial em Itabira e região e online para todo o Brasil.","url":"https://marcel0gs.github.io/denise-mota-arquitetura/","image":"https://marcel0gs.github.io/denise-mota-arquitetura/assets/img/hero-1200.webp","telephone":"+55 31 97163-3335","email":"denisemota.arquiteta@gmail.com","address":{"@type":"PostalAddress","streetAddress":"R. Suzinha de Sá Martins, 287, Sala 01, Esplanada da Estação","addressLocality":"Itabira","addressRegion":"MG","postalCode":"35900-209","addressCountry":"BR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"}],"areaServed":["Itabira","Minas Gerais","Brasil"],"sameAs":["https://maps.google.com/?cid=3645249256347178595"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Denise Mota Arquitetura","description":"Projetos residenciais de arquitetura e interiores, presencial em Itabira e região e online para todo o Brasil.","url":"https://marcel0gs.github.io/denise-mota-arquitetura/","image":"https://marcel0gs.github.io/denise-mota-arquitetura/assets/img/hero-1200.webp","telephone":"+55 31 97163-3335","email":"denisemota.arquiteta@gmail.com","address":{"@type":"PostalAddress","streetAddress":"R. Suzinha de Sá Martins, 287, Sala 01, Esplanada da Estação","addressLocality":"Itabira","addressRegion":"MG","postalCode":"35900-209","addressCountry":"BR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"}],"areaServed":["Itabira","Minas Gerais","Brasil"],"sameAs":["https://maps.google.com/?cid=3645249256347178595","https://www.instagram.com/arquitetadenisemota/"]}
 </script>
 <style>
 :root{
@@ -91,7 +91,8 @@ p{margin:0 0 1em}
 .hero h1 em{color:var(--bronze-claro)}
 .hero p.sub{max-width:52ch;margin:1.2rem 0 2rem;font-size:clamp(1rem,1.5vw,1.15rem);opacity:.9}
 .hero .acoes{display:flex;flex-wrap:wrap;gap:.9rem;align-items:center}
-.nota{display:inline-flex;align-items:center;gap:.6rem;margin-top:2rem;font:400 .82rem/1.3 var(--sans);letter-spacing:.06em;text-decoration:none;opacity:.92}
+.selos{display:flex;flex-wrap:wrap;gap:.6rem 2rem;margin-top:2rem}
+.nota{display:inline-flex;align-items:center;gap:.6rem;font:400 .82rem/1.3 var(--sans);letter-spacing:.06em;text-decoration:none;opacity:.92}
 .nota .estrelas{color:var(--bronze-claro);letter-spacing:.12em}
 .js .hero .entra{opacity:0;translate:0 24px;animation:sobe 1.1s var(--ease) forwards}
 .js .hero .entra:nth-child(2){animation-delay:.35s}.js .hero .entra:nth-child(3){animation-delay:.5s}
@@ -108,7 +109,7 @@ html:not(.js) .revela{opacity:1;translate:none}
 /* sobre */
 .sobre .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(2.5rem,7vw,7rem);align-items:center}
 .retrato{position:relative;margin:0}
-.retrato img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:40% 30%;filter:saturate(.9)}
+.retrato img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:40% 30%;filter:saturate(.9)}
 .retrato::before{content:"";position:absolute;inset:-14px 14px 14px -14px;border:1px solid var(--linha);z-index:-1}
 .retrato figcaption{position:absolute;left:-1px;bottom:-1px;background:var(--papel);padding:1rem 1.4rem 0 0;font:italic 1.6rem/1 var(--serif)}
 .retrato figcaption small{display:block;font:400 .7rem/1.4 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--tinta-2);margin-top:.5rem;font-style:normal}
@@ -201,18 +202,94 @@ html:not(.js) .revela{opacity:1;translate:none}
 @media (max-width:900px){.etapas{grid-template-columns:1fr 1fr;gap:3.2rem 2rem}}
 @media (max-width:560px){.etapas{grid-template-columns:1fr}}
 
-/* depoimentos */
-.depo .cabeca{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:1.5rem}
-.selo{display:flex;align-items:center;gap:1rem;text-decoration:none;padding:1rem 1.3rem;border:1px solid var(--linha);background:var(--branco)}
-.selo strong{font:400 2.6rem/1 var(--serif)}
-.selo span{font-size:.82rem;line-height:1.4;color:var(--tinta-2)}
-.selo .estrelas{color:var(--bronze);letter-spacing:.1em;display:block}
-.falas{columns:3 300px;column-gap:clamp(1rem,2.4vw,2rem);margin-top:3rem}
-.fala{break-inside:avoid;margin:0 0 clamp(1rem,2.4vw,2rem);padding:2rem 1.8rem 1.6rem;background:var(--branco);border:1px solid var(--linha);position:relative}
-.fala::before{content:"\201C";position:absolute;top:.6rem;right:1.2rem;font:400 4.5rem/1 var(--serif);color:var(--papel-2)}
-.fala blockquote{margin:0 0 1.2rem;font:400 1.32rem/1.4 var(--serif);position:relative}
-.fala figcaption{font-size:.8rem;letter-spacing:.08em;color:var(--tinta-2)}
-.fala figcaption b{font-weight:500;color:var(--tinta)}
+/* reconhecimento: Top of Mind */
+.premio{background:var(--noite);color:var(--papel)}
+.premio .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(3rem,6vw,6rem);align-items:center}
+.premio .fotos{position:relative;display:grid;grid-template-columns:7fr 5fr;gap:14px;align-items:end}
+.premio .fotos img{width:100%;height:auto;object-fit:cover}
+.premio .fotos .a{aspect-ratio:3/4;object-position:50% 30%}
+.premio .fotos .b{aspect-ratio:4/5;margin-bottom:14%;object-position:0% 35%}
+.carimbo{position:absolute;right:28%;top:-34px;width:118px;height:118px;color:var(--bronze-claro);background:var(--noite);border-radius:50%}
+.carimbo text{font:500 9.4px var(--sans);letter-spacing:.24em;fill:currentColor}
+.carimbo .n{font:italic 400 30px var(--serif);letter-spacing:0;fill:var(--papel)}
+.premio .rotulo{color:var(--bronze-claro)}
+.premio h2 em{color:var(--bronze-claro)}
+.premio p{color:rgba(244,239,231,.78);margin-top:1.6rem}
+.premio blockquote{margin:2.2rem 0 0;padding-left:1.4rem;border-left:1px solid var(--bronze-claro);font:italic 400 clamp(1.3rem,2vw,1.6rem)/1.4 var(--serif)}
+.premio cite{display:block;margin-top:1rem;font:500 .7rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;font-style:normal;color:var(--bronze-claro)}
+.premio .btn{margin-top:2.2rem}
+@media (max-width:820px){.premio .wrap{grid-template-columns:1fr}.carimbo{width:96px;height:96px;top:-28px}}
+
+/* projetos de clientes */
+.casos{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.2rem,2.6vw,2.2rem);margin-top:3rem}
+.caso{display:flex;flex-direction:column;text-align:left;padding:0;border:0;background:transparent;color:inherit;font:inherit;cursor:zoom-in}
+.caso .capa{position:relative;overflow:hidden;aspect-ratio:4/5;width:100%;background:var(--papel-2)}
+.caso img{width:100%;height:100%;object-fit:cover;transition:scale 1.2s var(--ease)}
+.caso:hover img,.caso:focus-visible img{scale:1.05}
+.caso .tag{position:absolute;top:1rem;left:1rem;background:rgba(244,239,231,.94);font:500 .64rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;padding:.6rem .8rem}
+.caso .tag.real{background:var(--tinta);color:var(--branco)}
+.caso .qtd{position:absolute;right:1rem;bottom:1rem;color:#fff;font:500 .66rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;background:rgba(15,14,12,.6);padding:.6rem .8rem;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.caso h3{font-size:clamp(1.6rem,2.4vw,2.1rem);margin:1.3rem 0 .6rem}
+.caso p{color:var(--tinta-2);margin:0;font-size:.98rem}
+@media (max-width:900px){.casos{grid-template-columns:1fr;gap:2.6rem}.caso .capa{aspect-ratio:4/3}}
+
+/* depoimentos: painel do Google + carrossel */
+.depo{background:var(--papel-2)}
+.aval{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(1.2rem,3vw,2.4rem);margin-top:3rem}
+.gpainel{background:var(--branco);border:1px solid var(--linha);padding:clamp(1.6rem,3vw,2.4rem);display:flex;flex-direction:column;gap:1.5rem}
+.gtopo{display:flex;align-items:center;gap:.7rem;font:500 .74rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--tinta-2)}
+.gtopo svg{width:26px;height:26px}
+.gnota{display:flex;align-items:flex-end;gap:1.1rem}
+.gnota strong{font:400 clamp(4.6rem,8vw,6.4rem)/.82 var(--serif)}
+.est{color:#e3a535;letter-spacing:.14em}
+.gnota .est{display:block;font-size:1.25rem;margin-bottom:.3rem}
+.gnota span{font-size:.88rem;color:var(--tinta-2)}
+.gpainel small{display:block;font:500 .66rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--tinta-2);margin-bottom:.7rem}
+.chips{display:flex;flex-wrap:wrap;gap:.45rem}
+.chips span{font-size:.82rem;padding:.45rem .85rem;border-radius:999px;background:var(--papel);border:1px solid var(--linha)}
+.gdest{margin:0 0 .6rem;font:italic 400 1.15rem/1.4 var(--serif)}
+.gpainel .btn{margin-top:auto;justify-content:center}
+.carro{position:relative;background:var(--tinta);color:var(--papel);padding:clamp(1.8rem,4vw,3.4rem);display:flex;flex-direction:column;overflow:hidden;min-height:430px}
+.carro::before{content:"\201C";position:absolute;right:1.6rem;top:-1.6rem;font:400 15rem/1 var(--serif);color:rgba(195,160,122,.13);pointer-events:none}
+.slides{display:grid;flex:1;position:relative}
+.slide{grid-area:1/1;display:flex;flex-direction:column;justify-content:space-between;gap:2rem;opacity:0;visibility:hidden;translate:28px 0;transition:opacity .6s var(--ease),translate .6s var(--ease),visibility 0s .6s}
+.slide.ativo{opacity:1;visibility:visible;translate:0 0;transition-delay:0s}
+.slide blockquote{margin:1rem 0 0;font:400 clamp(1.45rem,2.6vw,2.15rem)/1.32 var(--serif)}
+.autor{display:flex;align-items:center;gap:.9rem}
+.autor i{width:48px;height:48px;border-radius:50%;flex:none;display:grid;place-items:center;font:normal 500 1.05rem/1 var(--sans);color:var(--tinta)}
+.autor b{display:block;font-weight:500;letter-spacing:.04em}
+.autor span{font-size:.8rem;color:rgba(244,239,231,.66);display:flex;align-items:center;gap:.45rem;margin-top:.2rem}
+.autor span svg{width:14px;height:14px}
+.ctrl{display:flex;align-items:center;gap:.7rem;margin-top:2.4rem;padding-top:1.4rem;border-top:1px solid rgba(244,239,231,.15)}
+.ctrl .cont{font:500 .74rem/1 var(--sans);letter-spacing:.2em;margin-right:auto}
+.redondo{width:46px;height:46px;border-radius:50%;border:1px solid currentColor;background:transparent;color:inherit;display:grid;place-items:center;cursor:pointer;opacity:.75;transition:opacity .2s,background .2s}
+.redondo:hover,.redondo:focus-visible{opacity:1;background:rgba(127,127,127,.12)}
+.redondo svg{width:18px;height:18px}
+.carro .barra{position:absolute;left:0;bottom:0;height:3px;width:100%;background:var(--bronze-claro);transform-origin:left;scale:0 1}
+.carro .barra.corre{animation:barra 7s linear forwards}
+.carro:hover .barra,.carro:focus-within .barra{animation-play-state:paused}
+@keyframes barra{to{scale:1 1}}
+@media (max-width:900px){.aval{grid-template-columns:1fr}.gpainel{order:2}.carro{min-height:0}}
+
+/* instagram */
+.insta .cabeca{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1.6rem}
+.perfil{display:flex;align-items:center;gap:1.1rem;text-decoration:none;margin-top:2rem}
+.perfil img{width:76px;height:76px;border-radius:50%;object-fit:cover;object-position:50% 18%;padding:3px;background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7)}
+.perfil b{display:block;font:400 1.55rem/1.1 var(--serif)}
+.perfil span{font-size:.86rem;color:var(--tinta-2)}
+.feed-ctrl{display:flex;gap:.6rem;align-items:center}
+.feed{display:grid;grid-auto-flow:column;grid-auto-columns:clamp(230px,23vw,290px);gap:clamp(10px,1.4vw,18px);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-top:2.6rem;
+  padding-inline:max(var(--g),calc((100% - var(--max))/2));scroll-padding-inline:max(var(--g),calc((100% - var(--max))/2))}
+.feed::-webkit-scrollbar{display:none}
+.post{position:relative;scroll-snap-align:start;aspect-ratio:4/5;overflow:hidden;display:block;background:var(--papel-2)}
+.post img{width:100%;height:100%;object-fit:cover;transition:scale 1s var(--ease)}
+.post::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(15,14,12,.8));opacity:0;transition:opacity .4s}
+.post p{position:absolute;left:1rem;right:1rem;bottom:1rem;margin:0;color:#fff;font:400 1.08rem/1.35 var(--serif);z-index:1;opacity:0;translate:0 10px;transition:opacity .45s var(--ease),translate .45s var(--ease)}
+.post:hover img{scale:1.05}
+.post:hover::after,.post:focus-visible::after,.post:hover p,.post:focus-visible p{opacity:1;translate:0 0}
+.post .tipo{position:absolute;top:.85rem;right:.85rem;z-index:1;width:22px;height:22px;color:#fff;filter:drop-shadow(0 1px 3px rgba(0,0,0,.55))}
+@media (hover:none){.post::after,.post p{opacity:1;translate:0 0}.post p{font-size:.98rem}}
+@media (max-width:700px){.feed{grid-auto-columns:70vw}.feed-ctrl .redondo{display:none}}
 
 /* contato */
 .contato{position:relative;color:var(--papel);background:var(--noite);overflow:hidden}
@@ -264,6 +341,10 @@ html:not(.js) .revela{opacity:1;translate:none}
   <symbol id="i-esq" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="m15 18-6-6 6-6"/></symbol>
   <symbol id="i-dir" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="m9 18 6-6-6-6"/></symbol>
   <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></g></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></symbol>
+  <symbol id="i-carrossel" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="7" y="7" width="14" height="14" rx="2" fill="currentColor" fill-opacity=".25"/><path d="M4 17V5a2 2 0 0 1 2-2h12"/></g></symbol>
+  <symbol id="i-google" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3c-1.6 4.7-6.1 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 8 3l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 8 3l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2c-2 1.5-4.5 2.4-7.2 2.4-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"/></symbol>
   <symbol id="i-pino" viewBox="0 0 24 24"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
   <symbol id="i-relogio" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
   <symbol id="i-fone" viewBox="0 0 24 24"><path d="M13.83 16.57a1 1 0 0 0 1.21-.3l.36-.47A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.47.35a1 1 0 0 0-.29 1.23 14 14 0 0 0 6.39 6.39"/></symbol>
@@ -298,7 +379,10 @@ html:not(.js) .revela{opacity:1;translate:none}
       <a class="btn btn--claro" href="https://wa.me/5531971633335?text=Ol%C3%A1%2C%20Denise!%20Vi%20seu%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Conversar sobre meu projeto</a>
       <a class="btn btn--vazado" href="#projetos">Ver projetos</a>
     </div>
-    <a class="nota entra" href="https://maps.google.com/?cid=3645249256347178595" target="_blank" rel="noopener"><span class="estrelas" aria-hidden="true">★★★★★</span> 5,0 no Google, em 27 avaliações</a>
+    <div class="selos entra">
+      <a class="nota" href="https://maps.google.com/?cid=3645249256347178595" target="_blank" rel="noopener"><span class="estrelas" aria-hidden="true">★★★★★</span> 5,0 no Google, em 27 avaliações</a>
+      <a class="nota" href="#reconhecimento"><span class="estrelas" aria-hidden="true">◆</span> Top of Mind 2026 em Itabira</a>
+    </div>
   </div>
 </section>
 
@@ -307,7 +391,7 @@ html:not(.js) .revela{opacity:1;translate:none}
 <section class="sobre" id="sobre">
   <div class="wrap">
     <figure class="retrato revela">
-      <img src="assets/img/denise-retrato.webp" width="680" height="720" alt="Retrato da arquiteta Denise Mota" loading="lazy">
+      <img src="assets/img/denise-cozinha.webp" width="720" height="900" alt="A arquiteta Denise Mota apontando um detalhe de iluminação numa cozinha projetada por ela" loading="lazy">
       <figcaption>Denise Mota<small>Arquiteta e urbanista</small></figcaption>
     </figure>
     <div class="texto revela">
@@ -315,12 +399,34 @@ html:not(.js) .revela{opacity:1;translate:none}
       <h2>Um projeto com a sua essência, <em>não com um padrão.</em></h2>
       <p>Denise Mota é arquiteta e urbanista, formada pela Faculdade Santo Agostinho. Do escritório em Itabira, atende presencialmente na região e online em todo o território nacional.</p>
       <p>Cada projeto começa por uma escuta atenta: entender o que é importante para a família, como ela usa a casa e o que quer sentir dentro dela. Dessa conversa nasce uma arquitetura sem fórmula pronta, que une estética, função e inovação em cada detalhe.</p>
-      <p>O atendimento é próximo e exclusivo, para que você acompanhe e participe de cada etapa do seu projeto.</p>
+      <p>Antes da arquitetura, Denise tinha um cargo de destaque no setor financeiro. Quando o primeiro filho nasceu, deixou essa segurança para seguir o sonho de ser arquiteta e recomeçou em outra cidade, com um bebê de colo. Trabalho sério, honestidade e respeito por quem confia nela são os valores que trouxe dessa trajetória.</p>
       <div class="numeros">
         <div><strong>5,0</strong><span>nota no Google, em 27 avaliações</span></div>
-        <div><strong>Presencial</strong><span>em Itabira e região</span></div>
-        <div><strong>Online</strong><span>para todo o Brasil</span></div>
+        <div><strong>Top of Mind</strong><span>2026, escritórios de arquitetura em Itabira</span></div>
+        <div><strong>11 mil</strong><span>pessoas acompanham no Instagram</span></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="premio" id="reconhecimento">
+  <div class="wrap">
+    <div class="fotos revela">
+      <img class="a" src="assets/img/top-entrega.webp" width="1200" height="1198" alt="Denise Mota recebendo o prêmio Top of Mind 2026 no palco" loading="lazy">
+      <img class="b" src="assets/img/top-trofeu.webp" width="900" height="1201" alt="Denise Mota segurando o troféu Top of Mind 2026" loading="lazy">
+      <svg class="carimbo" viewBox="0 0 120 120" aria-hidden="true">
+        <defs><path id="circulo" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs>
+        <circle cx="60" cy="60" r="57" fill="none" stroke="currentColor" stroke-width=".8"/>
+        <text><textPath href="#circulo">TOP OF MIND · ITABIRA · ARQUITETURA ·</textPath></text>
+        <text class="n" x="60" y="70" text-anchor="middle">2026</text>
+      </svg>
+    </div>
+    <div class="revela">
+      <p class="rotulo"><b style="color:rgba(244,239,231,.6)">02</b> Reconhecimento</p>
+      <h2>Top of Mind 2026 <em>em Itabira.</em></h2>
+      <p>Na pesquisa popular espontânea do Top of Mind 2026, Denise Mota Arquitetura foi o nome mais lembrado na categoria Escritórios de Arquitetura, depois de dois anos seguidos entre os finalistas.</p>
+      <blockquote>Esse prêmio carrega o meu nome, mas ele foi construído por muitas mãos e pela confiança de muitas pessoas.<cite>Denise Mota</cite></blockquote>
+      <a class="btn btn--vazado" href="https://www.instagram.com/p/DZ1T6lujL-V/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-insta"/></svg>Ver no Instagram</a>
     </div>
   </div>
 </section>
@@ -329,7 +435,7 @@ html:not(.js) .revela{opacity:1;translate:none}
   <div class="wrap">
     <div class="cabeca revela">
       <div>
-        <p class="rotulo"><b>02</b> Do traço ao projeto</p>
+        <p class="rotulo"><b>03</b> Do traço ao projeto</p>
         <h2>Cada linha <em>tem um porquê.</em></h2>
       </div>
       <p>Antes da cor, do material e da luz, vem o desenho: onde fica cada ambiente, como a casa conversa com o terreno, por onde entra o sol. Arraste a linha e veja a fachada ganhar material, luz e paisagismo.</p>
@@ -346,10 +452,36 @@ html:not(.js) .revela{opacity:1;translate:none}
   </div>
 </section>
 
-<section class="projetos" id="projetos">
+<section class="clientes" id="clientes">
   <div class="wrap">
     <div class="revela">
-      <p class="rotulo"><b>03</b> Portfólio</p>
+      <p class="rotulo"><b>04</b> Projetos de clientes</p>
+      <h2>Cada casa conta <em>a história de quem mora nela.</em></h2>
+    </div>
+    <div class="casos">
+      <button class="caso revela" type="button" data-caso="helena">
+        <span class="capa"><img src="assets/img/helena-01-800.webp" alt="Quarto infantil com nichos iluminados e armário sob medida" loading="lazy"><span class="tag real">Obra entregue</span><span class="qtd">6 fotos</span></span>
+        <h3>O quarto da Helena</h3>
+        <p>Um quarto cheio de detalhes para uma mini cliente cheia de personalidade: nichos iluminados, marcenaria sob medida e cantinhos pensados para guardar os brinquedos.</p>
+      </button>
+      <button class="caso revela" type="button" data-caso="casa">
+        <span class="capa"><img src="assets/img/casa-01-800.webp" alt="Casa de campo com telhado de cerâmica, varandas e jardim" loading="lazy" style="object-position:60% 50%"><span class="tag">Projeto residencial</span><span class="qtd">7 imagens</span></span>
+        <h3>Uma casa feita nas conversas</h3>
+        <p>Cada pessoa da família trouxe desejos, histórias e dúvidas. A casa nasceu do jeito como eles se encontram, do que valorizam e do que sonham viver daqui para frente.</p>
+      </button>
+      <button class="caso revela" type="button" data-caso="ampliacao">
+        <span class="capa"><img src="assets/img/ampliacao-02-800.webp" alt="Fachada contemporânea com marquise curva e jardim tropical na entrada" loading="lazy"><span class="tag">Ampliação</span><span class="qtd">4 imagens</span></span>
+        <h3>Ampliar sem apagar a identidade</h3>
+        <p>O desafio foi ampliar uma construção existente respeitando a sua linguagem. A proposta nova nasce do que já estava construído e conversa com ele.</p>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="projetos" id="projetos" style="padding-top:0">
+  <div class="wrap">
+    <div class="revela">
+      <p class="rotulo"><b>05</b> Portfólio</p>
       <h2>Casas, ambientes <em>e detalhes.</em></h2>
       <p style="color:var(--tinta-2);max-width:56ch;margin-top:1.4rem">Imagens em 3D de projetos residenciais do escritório. Toque em qualquer imagem para ver em tela cheia.</p>
     </div>
@@ -377,7 +509,7 @@ html:not(.js) .revela{opacity:1;translate:none}
 <section class="servicos" id="servicos" style="padding-top:0">
   <div class="wrap">
     <div class="revela">
-      <p class="rotulo"><b>04</b> Serviços</p>
+      <p class="rotulo"><b>06</b> Serviços</p>
       <h2>Da fachada <em>à última prateleira.</em></h2>
     </div>
     <div class="cartoes">
@@ -417,7 +549,7 @@ html:not(.js) .revela{opacity:1;translate:none}
 <section class="processo" id="processo">
   <div class="wrap">
     <div class="revela">
-      <p class="rotulo"><b style="color:rgba(244,239,231,.6)">05</b> Processo</p>
+      <p class="rotulo"><b style="color:rgba(244,239,231,.6)">07</b> Processo</p>
       <h2>Como o projeto <em>acontece.</em></h2>
     </div>
     <ol class="etapas">
@@ -431,31 +563,57 @@ html:not(.js) .revela{opacity:1;translate:none}
 
 <section class="depo" id="depoimentos">
   <div class="wrap">
-    <div class="cabeca revela">
-      <div>
-        <p class="rotulo"><b>06</b> Depoimentos</p>
-        <h2>Quem já confiou <em>a casa à Denise.</em></h2>
-      </div>
-      <a class="selo" href="https://maps.google.com/?cid=3645249256347178595" target="_blank" rel="noopener"><strong>5,0</strong><span><span class="estrelas" aria-hidden="true">★★★★★</span>27 avaliações no Google</span></a>
+    <div class="revela">
+      <p class="rotulo"><b>08</b> Depoimentos</p>
+      <h2>Quem já confiou <em>a casa à Denise.</em></h2>
     </div>
-    <div class="falas">
-      <figure class="fala revela"><blockquote>Excelente profissional, apaixonada pelo que faz. Traz muita riqueza de detalhes nos seus projetos e está sempre disponível quando precisamos.</blockquote><figcaption><b>Adriano T.</b> · avaliação no Google</figcaption></figure>
-      <figure class="fala revela"><blockquote>Denise Mota construiu um projeto para minha casa, avalio como excelente tanto a questão técnica quanto a forma de conhecer o perfil da família e transformar em projeto.</blockquote><figcaption><b>Giovani S.</b> · Itabira, MG</figcaption></figure>
-      <figure class="fala revela"><blockquote>Simplesmente faz mais que o combinado, impressionante a dedicação durante todo processo, só tenho a agradecer por tudo, super indico!</blockquote><figcaption><b>Edinilton M.</b> · avaliação no Google</figcaption></figure>
-      <figure class="fala revela"><blockquote>Entregar seus sonhos na mão de uma profissional, e ter um retorno muito além do que você imaginava, não tem preço, top demais essa cozinha.</blockquote><figcaption><b>Rondineli G.</b> · Itabira, MG</figcaption></figure>
-      <figure class="fala revela"><blockquote>Minha experiência está sendo excelente. Muito detalhista, cuidadosa, a Denise está sempre disponível e sempre com um sorriso no rosto disposta a ajudar.</blockquote><figcaption><b>Angela G.</b> · avaliação no Google</figcaption></figure>
-      <figure class="fala revela"><blockquote>Excelente profissional. Ficamos muito satisfeitos com os projetos que Denise fez. Recomendamos pela competência e experiência.</blockquote><figcaption><b>Juliene A.</b> · Carmésia, MG</figcaption></figure>
-      <figure class="fala revela"><blockquote>Denise Mota é uma profissional extremamente cuidadosa, profissional e de extremo bom gosto. É também bastante acessível na discussão do projeto em todas as suas etapas.</blockquote><figcaption><b>Vanísia A.</b> · Belo Horizonte, MG</figcaption></figure>
-      <figure class="fala revela"><blockquote>Vamos fazer todos os projetos com você! Estamos encantados com seu trabalho e dedicação.</blockquote><figcaption><b>Juliana C.</b> · Itabira, MG</figcaption></figure>
+    <div class="aval">
+      <aside class="gpainel revela" aria-label="Resumo das avaliações no Google">
+        <div class="gtopo"><svg aria-hidden="true"><use href="#i-google"/></svg>Avaliações no Google</div>
+        <div class="gnota"><strong>5,0</strong><div><span class="est" aria-hidden="true">★★★★★</span><span>27 avaliações</span></div></div>
+        <div><small>O que os clientes mais repetem</small><div class="chips"><span>Detalhista</span><span>Sempre disponível</span><span>Cuidadosa</span><span>Dedicação</span><span>Bom gosto</span></div></div>
+        <div><small>Destaques do Google</small><p class="gdest">“Muito profissional, com resultados incríveis e clareza na proposta.”</p><p class="gdest">“Ficamos muito satisfeitos com os projetos que Denise fez.”</p></div>
+        <a class="btn" href="https://maps.google.com/?cid=3645249256347178595" target="_blank" rel="noopener">Ver todas no Google</a>
+      </aside>
+      <div class="carro revela" id="carro" aria-roledescription="carrossel" aria-label="Depoimentos de clientes">
+        <div class="slides" id="slides" aria-live="polite"></div>
+        <div class="ctrl">
+          <span class="cont" id="cont">01 / 08</span>
+          <button class="redondo" type="button" id="dep-ant" aria-label="Depoimento anterior"><svg aria-hidden="true"><use href="#i-esq"/></svg></button>
+          <button class="redondo" type="button" id="dep-prox" aria-label="Próximo depoimento"><svg aria-hidden="true"><use href="#i-dir"/></svg></button>
+        </div>
+        <span class="barra" id="barra" aria-hidden="true"></span>
+      </div>
     </div>
   </div>
+</section>
+
+<section class="insta" id="instagram">
+  <div class="wrap">
+    <div class="cabeca revela">
+      <div>
+        <p class="rotulo"><b>09</b> Instagram</p>
+        <h2>O dia a dia <em>do escritório.</em></h2>
+        <a class="perfil" href="https://www.instagram.com/arquitetadenisemota/" target="_blank" rel="noopener">
+          <img src="assets/img/ig-DZ1T6lujL-V.webp" alt="" width="76" height="76" loading="lazy">
+          <span><b>@arquitetadenisemota</b><span>Mais de 11 mil seguidores · 893 publicações</span></span>
+        </a>
+      </div>
+      <div class="feed-ctrl">
+        <button class="redondo" type="button" id="feed-ant" aria-label="Posts anteriores"><svg aria-hidden="true"><use href="#i-esq"/></svg></button>
+        <button class="redondo" type="button" id="feed-prox" aria-label="Mais posts"><svg aria-hidden="true"><use href="#i-dir"/></svg></button>
+        <a class="btn" href="https://www.instagram.com/arquitetadenisemota/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-insta"/></svg>Seguir</a>
+      </div>
+    </div>
+  </div>
+  <div class="feed revela" id="feed"></div>
 </section>
 
 <section class="contato" id="contato">
   <img class="fundo" src="assets/img/lazer-05-1600.webp" srcset="assets/img/lazer-05-800.webp 800w, assets/img/lazer-05-1600.webp 1280w" sizes="100vw" alt="" loading="lazy">
   <div class="wrap">
     <div class="revela">
-      <p class="rotulo"><b style="color:rgba(244,239,231,.6)">07</b> Contato</p>
+      <p class="rotulo"><b style="color:rgba(244,239,231,.6)">10</b> Contato</p>
       <h2>Vamos conversar <em>sobre a sua casa?</em></h2>
       <p class="chamada">Conte em poucas palavras o que você tem em mente: construir, reformar ou repensar os ambientes. A primeira conversa é pelo WhatsApp.</p>
       <a class="btn btn--claro" href="https://wa.me/5531971633335?text=Ol%C3%A1%2C%20Denise!%20Vi%20seu%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Chamar no WhatsApp</a>
@@ -464,6 +622,7 @@ html:not(.js) .revela{opacity:1;translate:none}
       <li><svg aria-hidden="true"><use href="#i-pino"/></svg><div><small>Escritório</small>R. Suzinha de Sá Martins, 287, Sala 01<br>Esplanada da Estação, Itabira, MG<br><a href="https://maps.google.com/?cid=3645249256347178595" target="_blank" rel="noopener">Como chegar</a></div></li>
       <li><svg aria-hidden="true"><use href="#i-relogio"/></svg><div><small>Horário</small>Segunda a sexta, das 9h às 18h</div></li>
       <li><svg aria-hidden="true"><use href="#i-fone"/></svg><div><small>WhatsApp</small><a href="https://wa.me/5531971633335" target="_blank" rel="noopener">(31) 97163-3335</a></div></li>
+      <li><svg aria-hidden="true"><use href="#i-insta"/></svg><div><small>Instagram</small><a href="https://www.instagram.com/arquitetadenisemota/" target="_blank" rel="noopener">@arquitetadenisemota</a></div></li>
       <li><svg aria-hidden="true"><use href="#i-mail"/></svg><div><small>E-mail</small><a href="mailto:denisemota.arquiteta@gmail.com">denisemota.arquiteta@gmail.com</a></div></li>
     </ul>
   </div>
@@ -537,14 +696,14 @@ html:not(.js) .revela{opacity:1;translate:none}
   const qtd = { fachada: 9, estar: 11, cozinha: 6, lazer: 10, quarto: 6, banho: 2 };
   const arq = { banho: 'banho' };
   const todas = [];
-  for (const cat in qtd) for (let i = 1; i <= qtd[cat]; i++) todas.push({ cat, f: (arq[cat] || cat) + '-' + String(i).padStart(2, '0') });
+  for (const cat in qtd) for (let i = 1; i <= qtd[cat]; i++) todas.push({ cat, f: (arq[cat] || cat) + '-' + String(i).padStart(2, '0'), nome: nomes[cat], alt: alts[cat] + ' projetada por Denise Mota' });
   const destaques = ['fachada-01', 'estar-05', 'cozinha-01', 'lazer-02', 'quarto-01', 'fachada-06', 'estar-02', 'lazer-05', 'cozinha-04', 'fachada-03', 'quarto-04', 'estar-10']
     .map(f => todas.find(x => x.f === f));
   const grade = $('#grade'), verTodos = $('#ver-todos');
-  let lista = destaques;
+  let lista = destaques, listaGrade = destaques;
   const monta = (itens) => {
-    lista = itens;
-    grade.innerHTML = itens.map((it, i) => `<button type="button" data-i="${i}" style="animation-delay:${Math.min(i, 11) * 55}ms" aria-label="Ampliar: ${nomes[it.cat]}"><img src="assets/img/${it.f}-800.webp" alt="${alts[it.cat]} projetada por Denise Mota" loading="lazy" decoding="async"><span>${nomes[it.cat]}</span></button>`).join('');
+    listaGrade = itens;
+    grade.innerHTML = itens.map((it, i) => `<button type="button" data-i="${i}" style="animation-delay:${Math.min(i, 11) * 55}ms" aria-label="Ampliar: ${it.nome}"><img src="assets/img/${it.f}-800.webp" alt="${it.alt}" loading="lazy" decoding="async"><span>${it.nome}</span></button>`).join('');
   };
   const filtros = document.querySelectorAll('#filtros button');
   const escolhe = (cat) => {
@@ -564,12 +723,77 @@ html:not(.js) .revela{opacity:1;translate:none}
     const it = lista[atual];
     img.style.opacity = 0;
     const nova = new Image();
-    nova.onload = () => { img.src = nova.src; img.alt = alts[it.cat] + ' projetada por Denise Mota'; img.style.opacity = 1; };
+    nova.onload = () => { img.src = nova.src; img.alt = it.alt; img.style.opacity = 1; };
     nova.src = `assets/img/${it.f}-1600.webp`;
-    $('#fc-cat').textContent = nomes[it.cat];
+    $('#fc-cat').textContent = it.nome;
     $('#fc-n').textContent = String(atual + 1).padStart(2, '0') + ' / ' + String(lista.length).padStart(2, '0');
   };
-  grade.addEventListener('click', (e) => { const b = e.target.closest('button'); if (!b) return; mostra(+b.dataset.i); dlg.showModal(); });
+  const abre = (itens, i) => { lista = itens; mostra(i); dlg.showModal(); };
+  grade.addEventListener('click', (e) => { const b = e.target.closest('button'); if (b) abre(listaGrade, +b.dataset.i); });
+
+  // projetos de clientes: cada um abre a sua sequência na tela cheia
+  const casos = {
+    helena: { n: 6, nome: 'O quarto da Helena · obra entregue', alt: 'Foto real do quarto da Helena, projeto de Denise Mota' },
+    casa: { n: 7, nome: 'Uma casa feita nas conversas', alt: 'Imagem 3D da casa projetada por Denise Mota' },
+    ampliacao: { n: 4, nome: 'Ampliação', alt: 'Imagem 3D da ampliação projetada por Denise Mota' },
+  };
+  document.querySelectorAll('[data-caso]').forEach(b => b.addEventListener('click', () => {
+    const c = casos[b.dataset.caso];
+    abre(Array.from({ length: c.n }, (_, i) => ({ f: b.dataset.caso + '-' + String(i + 1).padStart(2, '0'), nome: c.nome, alt: c.alt })), 0);
+  }));
+
+  // depoimentos: um por vez, troca sozinho a cada 7 s (para no hover, no foco e ao tocar)
+  const deps = [
+    ['Adriano T.', 'g', 'Excelente profissional, apaixonada pelo que faz. Traz muita riqueza de detalhes nos seus projetos e está sempre disponível quando precisamos.'],
+    ['Giovani S.', 'Itabira, MG', 'Denise Mota construiu um projeto para minha casa, avalio como excelente tanto a questão técnica quanto a forma de conhecer o perfil da família e transformar em projeto.'],
+    ['Angela G.', 'g', 'Minha experiência está sendo excelente. Muito detalhista, cuidadosa, a Denise está sempre disponível e sempre com um sorriso no rosto disposta a ajudar.'],
+    ['Rondineli G.', 'Itabira, MG', 'Entregar seus sonhos na mão de uma profissional, e ter um retorno muito além do que você imaginava, não tem preço, top demais essa cozinha.'],
+    ['Edinilton M.', 'g', 'Simplesmente faz mais que o combinado, impressionante a dedicação durante todo processo, só tenho a agradecer por tudo, super indico!'],
+    ['Juliene A.', 'Carmésia, MG', 'Excelente profissional. Ficamos muito satisfeitos com os projetos que Denise fez. Recomendamos pela competência e experiência.'],
+    ['Vanísia A.', 'g', 'Denise Mota é uma profissional extremamente cuidadosa, profissional e de extremo bom gosto. É também bastante acessível na discussão do projeto em todas as suas etapas.'],
+    ['Juliana C.', 'Itabira, MG', 'Vamos fazer todos os projetos com você! Estamos encantados com seu trabalho e dedicação.'],
+  ];
+  const cores = ['#c3a07a', '#a9b49c', '#d2b5a3', '#b7ada0'];
+  const slides = $('#slides'), carro = $('#carro'), barra = $('#barra');
+  slides.innerHTML = deps.map(([n, o, t], i) => `<figure class="slide" role="group" aria-roledescription="depoimento" aria-label="${i + 1} de ${deps.length}"><div><span class="est" aria-label="5 estrelas">★★★★★</span><blockquote>${t}</blockquote></div><figcaption class="autor"><i style="background:${cores[i % 4]}" aria-hidden="true">${n[0]}</i><div><b>${n}</b><span>${o === 'g' ? '<svg aria-hidden="true"><use href="#i-google"/></svg>Avaliação no Google' : 'Cliente · ' + o}</span></div></figcaption></figure>`).join('');
+  const sl = slides.children;
+  let dep = 0, timer = null, parado = reduz;
+  const vai = (i) => {
+    sl[dep].classList.remove('ativo'); dep = (i + sl.length) % sl.length; sl[dep].classList.add('ativo');
+    $('#cont').textContent = String(dep + 1).padStart(2, '0') + ' / ' + String(sl.length).padStart(2, '0');
+    barra.classList.remove('corre'); void barra.offsetWidth; if (!parado) barra.classList.add('corre');
+  };
+  barra.addEventListener('animationend', () => vai(dep + 1));
+  sl[0].classList.add('ativo'); vai(0);
+  const para = () => { parado = true; barra.classList.remove('corre'); };
+  $('#dep-ant').addEventListener('click', () => { para(); vai(dep - 1); });
+  $('#dep-prox').addEventListener('click', () => { para(); vai(dep + 1); });
+  let sx = null;
+  carro.addEventListener('pointerdown', (e) => { sx = e.clientX; });
+  carro.addEventListener('pointerup', (e) => { if (sx === null) return; const dx = e.clientX - sx; sx = null; if (Math.abs(dx) > 50) { para(); vai(dep + (dx < 0 ? 1 : -1)); } });
+  // só começa a contar quando aparece na tela
+  if (!reduz) { barra.classList.remove('corre'); new IntersectionObserver(([e], o) => { if (e.isIntersecting && !parado) { barra.classList.add('corre'); o.disconnect(); } }, { threshold: .5 }).observe(carro); }
+
+  // Instagram: capas dos últimos posts, cada uma leva pro post
+  const posts = [
+    ['DeHXR0qERD_', 'c', 'É nesse encontro entre inteligência e poesia que acreditamos.'],
+    ['Dd-MG34CY_T', 'c', 'Hoje vamos conhecer como ficou o quartinho da Helena!'],
+    ['Dd_-PqaRSBO', 'r', 'Tenho cada vez mais apreço pela suavidade.'],
+    ['Dd4_fGvkZwD', 'c', ''],
+    ['DdvALjiRvnJ', 'p', 'Gosto do que é bem pensado, do que tem essência e, por isso, permanece.'],
+    ['Db6OxoYkRld', 'c', 'Nossos projetos são construídos nas conversas.'],
+    ['DbmSBZvRNNs', 'p', ''],
+    ['DZ-JVbJkRKx', 'c', 'Somos Top of Mind 2026 na categoria Escritórios de Arquitetura.'],
+    ['DZ1T6lujL-V', 'c', 'Algumas conquistas não começam no palco. Elas começam muito antes.'],
+    ['DY8LK47xAjg', 'p', 'Há dois anos consecutivos, nosso nome aparece entre os finalistas.'],
+    ['DYsislAxkUo', 'r', 'Acreditamos em uma arquitetura que vai além da estética.'],
+    ['C5JWgWzr0pO', 'r', 'Um projeto original, atemporal e personalizado, nos mínimos detalhes.'],
+  ];
+  const feed = $('#feed');
+  feed.innerHTML = posts.map(([c, t, txt]) => `<a class="post" href="https://www.instagram.com/${t === 'r' ? 'reel' : 'p'}/${c}/" target="_blank" rel="noopener" aria-label="${txt ? 'Post: ' + txt : 'Post do Instagram'} (abre o Instagram)"><img src="assets/img/ig-${c}.webp" alt="" width="600" height="750" loading="lazy">${t !== 'p' ? `<svg class="tipo" aria-hidden="true"><use href="#i-${t === 'r' ? 'play' : 'carrossel'}"/></svg>` : ''}${txt ? `<p>${txt}</p>` : ''}</a>`).join('');
+  const passo = () => feed.querySelector('.post').offsetWidth * 2;
+  $('#feed-ant').addEventListener('click', () => feed.scrollBy({ left: -passo(), behavior: reduz ? 'auto' : 'smooth' }));
+  $('#feed-prox').addEventListener('click', () => feed.scrollBy({ left: passo(), behavior: reduz ? 'auto' : 'smooth' }));
   $('#fc-fechar').addEventListener('click', () => dlg.close());
   $('#fc-ant').addEventListener('click', () => mostra(atual - 1));
   $('#fc-prox').addEventListener('click', () => mostra(atual + 1));
