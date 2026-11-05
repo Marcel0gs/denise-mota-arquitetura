@@ -30,6 +30,13 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ProfessionalService","name":"Denise Mota Arquitetura","description":"Projetos de arquitetura e interiores residenciais e comerciais, presencial em Itabira e região e online para todo o Brasil.","url":"https://marcel0gs.github.io/denise-mota-arquitetura/","image":"https://marcel0gs.github.io/denise-mota-arquitetura/assets/img/hero-1200.webp","telephone":"+55 31 97163-3335","email":"denisemota.arquiteta@gmail.com","address":{"@type":"PostalAddress","streetAddress":"R. Suzinha de Sá Martins, 287, Sala 01, Esplanada da Estação","addressLocality":"Itabira","addressRegion":"MG","postalCode":"35900-209","addressCountry":"BR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"}],"areaServed":["Itabira","Minas Gerais","Brasil"],"sameAs":["https://maps.google.com/?cid=3645249256347178595","https://www.instagram.com/arquitetadenisemota/"]}
 </script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Posso contratar um projeto morando em outra cidade?","acceptedAnswer":{"@type":"Answer","text":"Pode. Além do atendimento presencial em Itabira e região, a Denise faz projetos online para todo o Brasil: as conversas são por videochamada, você envia as medidas e as fotos do espaço, e o projeto chega em imagens 3D para você ver cada ambiente antes de executar."}},
+{"@type":"Question","name":"A Denise faz reforma ou só construção nova?","acceptedAnswer":{"@type":"Answer","text":"Os dois. Ela projeta casas novas e também trabalha sobre o que já existe: reforma de ambientes, ampliação e fachada nova."}},
+{"@type":"Question","name":"Consigo ver como vai ficar antes da obra?","acceptedAnswer":{"@type":"Answer","text":"Sim. Os ambientes são apresentados em imagens 3D realistas, com materiais, luz e mobiliário, e ajustados com você antes de qualquer execução."}},
+{"@type":"Question","name":"Como peço um orçamento?","acceptedAnswer":{"@type":"Answer","text":"Pelo WhatsApp (31) 97163-3335. Conte o que você quer fazer, a cidade e o tamanho aproximado do espaço. O valor depende do tipo e do tamanho de cada projeto, por isso a proposta vem depois dessa primeira conversa."}}]}
+</script>
 <style>
 :root{
   --papel:#f4efe7;--papel-2:#ebe4d8;--linha:#d8cebe;--tinta:#1d1b18;--tinta-2:#57504a;
@@ -220,6 +227,10 @@ html:not(.js) .revela{opacity:1;translate:none}
 .grade button:hover span,.grade button:focus-visible span{opacity:1;translate:0 0}
 .mais{display:flex;justify-content:center;margin-top:2.4rem}
 .mais .btn{background:transparent;color:var(--tinta)}
+/* convite depois da galeria: quem acabou de ver os projetos já tem o botão ali */
+.convite{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.2rem 2rem;margin-top:clamp(2.6rem,5vw,3.6rem);padding:clamp(1.4rem,3vw,2rem) 0;border-block:1px solid var(--linha)}
+.convite p{margin:0;font:400 clamp(1.45rem,2.4vw,1.95rem)/1.25 var(--serif);max-width:36ch}
+.convite em{color:var(--bronze)}
 @media (max-width:700px){.grade{grid-template-columns:1fr 1fr;grid-auto-rows:44vw}.grade button,.grade button:nth-child(10n+7){grid-column:span 1}.grade button:nth-child(5n+1){grid-column:span 2}.grade button span{opacity:1;translate:0 0;padding-top:1.6rem;font-size:.62rem}}
 
 /* lightbox */
@@ -408,6 +419,31 @@ html:not(.js) .revela{opacity:1;translate:none}
 .perfil img{width:76px;height:76px;border-radius:50%;object-fit:cover;object-position:50% 18%;padding:3px;background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7)}
 .perfil b{display:block;font:400 1.55rem/1.1 var(--serif)}
 .perfil span{font-size:.86rem;color:var(--tinta-2)}
+
+/* dúvidas: só o que dá pra responder com prova (acompanhamento de obra fica de fora até ela confirmar).
+   <details> funciona sem JS; name="duvidas" deixa uma aberta por vez; a abertura suave é só onde o navegador sabe animar altura */
+.duvidas{background:var(--papel-2)}
+.duvidas .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:2rem clamp(2.5rem,6vw,6rem);align-items:start}
+.duvidas .cabeca{position:sticky;top:110px}
+.perguntas details{border-bottom:1px solid var(--linha)}
+.perguntas details:first-child{border-top:1px solid var(--linha)}
+.perguntas summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;padding:1.5rem 0;font:400 clamp(1.3rem,2.1vw,1.65rem)/1.25 var(--serif);transition:color .25s}
+.perguntas summary::-webkit-details-marker{display:none}
+.perguntas summary::after{content:"";flex:none;width:36px;height:36px;border:1px solid var(--linha);border-radius:50%;
+  background:linear-gradient(currentColor,currentColor) center/12px 1px no-repeat,linear-gradient(currentColor,currentColor) center/1px 12px no-repeat;transition:rotate .4s var(--ease),border-color .3s}
+.perguntas summary:hover,.perguntas details[open] summary{color:var(--bronze)}
+.perguntas details[open] summary::after{rotate:45deg;border-color:var(--bronze-claro)}
+.resp{padding:0 0 1.7rem}
+.resp p{margin:0;color:var(--tinta-2);max-width:60ch}
+.link-zap{display:inline-flex;align-items:center;gap:.55rem;margin-top:1.1rem;font:500 .76rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--tinta);padding-bottom:.35rem;border-bottom:1px solid var(--bronze-claro);transition:color .2s}
+.link-zap svg{width:17px;height:17px;color:#1f8f55}
+.link-zap:hover{color:var(--bronze)}
+@supports (interpolate-size:allow-keywords){
+  .perguntas{interpolate-size:allow-keywords}
+  .perguntas details::details-content{block-size:0;overflow:clip;transition:block-size .5s var(--ease),content-visibility .5s allow-discrete}
+  .perguntas details[open]::details-content{block-size:auto}
+}
+@media (max-width:820px){.duvidas .wrap{grid-template-columns:1fr}.duvidas .cabeca{position:static}}
 
 /* contato */
 .contato{position:relative;color:var(--papel);background:var(--noite);overflow:hidden}
@@ -677,6 +713,10 @@ html:not(.js) .revela{opacity:1;translate:none}
     </div>
     <div class="grade" id="grade" aria-live="polite"></div>
     <div class="mais"><button class="btn" type="button" id="ver-todos">Ver todos os projetos</button></div>
+    <div class="convite revela">
+      <p>Gostou de algum desses projetos? <em>Conte o que você imagina para o seu.</em></p>
+      <a class="btn" href="https://wa.me/5531971633335?text=Ol%C3%A1%2C%20Denise!%20Vi%20os%20projetos%20no%20seu%20site%20e%20gostaria%20de%20conversar%20sobre%20o%20meu." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Conversar sobre meu projeto</a>
+    </div>
     <noscript><p>Para ver o portfólio completo, <a href="https://wa.me/5531971633335">fale com a Denise pelo WhatsApp</a>.</p></noscript>
   </div>
 </section>
@@ -870,11 +910,39 @@ html:not(.js) .revela{opacity:1;translate:none}
   </div>
 </section>
 
+<section class="duvidas" id="duvidas">
+  <div class="wrap">
+    <div class="cabeca revela">
+      <p class="rotulo"><b>10</b> Dúvidas</p>
+      <h2>O que costumam perguntar <em>antes de começar.</em></h2>
+    </div>
+    <div class="perguntas">
+      <details class="revela" name="duvidas">
+        <summary>Posso contratar um projeto morando em outra cidade?</summary>
+        <div class="resp"><p>Pode. Além do atendimento presencial em Itabira e região, a Denise faz projetos online para todo o Brasil: as conversas são por videochamada, você envia as medidas e as fotos do espaço, e o projeto chega em imagens 3D para você ver cada ambiente antes de executar.</p></div>
+      </details>
+      <details class="revela" name="duvidas">
+        <summary>A Denise faz reforma ou só construção nova?</summary>
+        <div class="resp"><p>Os dois. Ela projeta casas novas e também trabalha sobre o que já existe: reforma de ambientes, ampliação e fachada nova. Nesta página estão a ampliação de uma casa que manteve a identidade da construção original e o antes e depois da fachada da Italinda.</p></div>
+      </details>
+      <details class="revela" name="duvidas">
+        <summary>Consigo ver como vai ficar antes da obra?</summary>
+        <div class="resp"><p>Sim. Os ambientes são apresentados em imagens 3D realistas, com materiais, luz e mobiliário, e ajustados com você antes de qualquer execução. As imagens do portfólio acima foram feitas assim.</p></div>
+      </details>
+      <details class="revela" name="duvidas">
+        <summary>Como peço um orçamento?</summary>
+        <div class="resp"><p>Pelo WhatsApp. Conte em poucas linhas o que você quer fazer (construir, reformar ou repensar os ambientes), a cidade e o tamanho aproximado do espaço. O valor depende do tipo e do tamanho de cada projeto, por isso a proposta vem depois dessa primeira conversa.</p>
+        <a class="link-zap" href="https://wa.me/5531971633335?text=Ol%C3%A1%2C%20Denise!%20Gostaria%20de%20pedir%20um%20or%C3%A7amento%20de%20projeto." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Pedir orçamento no WhatsApp</a></div>
+      </details>
+    </div>
+  </div>
+</section>
+
 <section class="contato" id="contato">
   <img class="fundo" data-janela=".1" src="assets/img/lazer-05-1600.webp" srcset="assets/img/lazer-05-800.webp 800w, assets/img/lazer-05-1600.webp 1280w" sizes="100vw" alt="" loading="lazy">
   <div class="wrap">
     <div class="revela">
-      <p class="rotulo"><b style="color:rgba(244,239,231,.6)">10</b> Contato</p>
+      <p class="rotulo"><b style="color:rgba(244,239,231,.6)">11</b> Contato</p>
       <h2>Vamos conversar <em>sobre o seu projeto?</em></h2>
       <p class="chamada">Conte em poucas palavras o que você tem em mente: construir, reformar ou repensar os ambientes. A primeira conversa é pelo WhatsApp.</p>
       <a class="btn btn--claro" href="https://wa.me/5531971633335?text=Ol%C3%A1%2C%20Denise!%20Vi%20seu%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Chamar no WhatsApp</a>
