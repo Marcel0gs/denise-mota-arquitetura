@@ -240,11 +240,13 @@ html:not(.js) .revela{opacity:1;translate:none}
 .empresas .rotulo b{color:rgba(244,239,231,.6)}
 .empresas h2 em{color:var(--bronze-claro)}
 .empresas .cabeca>p{color:rgba(244,239,231,.75);margin:0}
-.faixa{display:flex;overflow:hidden;margin:clamp(2.6rem,5vw,4rem) 0;padding:1.5rem 0;border-block:1px solid rgba(244,239,231,.14);-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
-.faixa ul{display:flex;flex-shrink:0;margin:0;padding:0;list-style:none;animation:faixa 44s linear infinite}
+.faixa{display:flex;overflow:hidden;margin:clamp(2.6rem,5vw,4rem) 0;padding:1.9rem 0;border-block:1px solid rgba(244,239,231,.14);-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.faixa ul{display:flex;flex-shrink:0;margin:0;padding:0;list-style:none;animation:faixa 40s linear infinite}
 .faixa:hover ul{animation-play-state:paused}
-.faixa li{display:flex;align-items:center;white-space:nowrap;font:400 clamp(1.45rem,2.6vw,2.2rem)/1.1 var(--serif)}
-.faixa li::after{content:"";width:6px;height:6px;margin:0 clamp(1.4rem,3vw,2.6rem);background:var(--bronze-claro);rotate:45deg}
+.faixa li{display:flex;align-items:center;margin:0 clamp(1.8rem,3.6vw,3.4rem)}
+.faixa img{display:block;width:auto;height:calc(var(--h) * var(--k,1) * 1px);opacity:.86}
+.faixa{--k:1.15}
+@media (max-width:560px){.faixa{--k:.78}}
 @keyframes faixa{to{translate:-100% 0}}
 .vitrine{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(1.8rem,2.6vw,2.4rem) clamp(.9rem,1.8vw,1.6rem)}
 .caso.emp .capa{aspect-ratio:4/5;background:#262420}
@@ -303,11 +305,13 @@ html:not(.js) .revela{opacity:1;translate:none}
 .perfil b{display:block;font:400 1.55rem/1.1 var(--serif)}
 .perfil span{font-size:.86rem;color:var(--tinta-2)}
 .feed-ctrl{display:flex;gap:.6rem;align-items:center}
-.feed{display:grid;grid-auto-flow:column;grid-auto-columns:clamp(230px,23vw,290px);gap:clamp(10px,1.4vw,18px);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-top:2.6rem;
+.feed{display:grid;grid-auto-flow:column;grid-auto-columns:clamp(230px,23vw,290px);gap:clamp(10px,1.4vw,18px);overflow-x:auto;scrollbar-width:none;margin-top:2.6rem;
   padding-inline:max(var(--g),calc((100% - var(--max))/2));scroll-padding-inline:max(var(--g),calc((100% - var(--max))/2))}
 .feed::-webkit-scrollbar{display:none}
 .post{position:relative;scroll-snap-align:start;aspect-ratio:4/5;overflow:hidden;display:block;background:var(--papel-2)}
 .post img{width:100%;height:100%;object-fit:cover;transition:scale 1s var(--ease)}
+.feed .post{opacity:0;translate:0 34px;transition:opacity .9s var(--ease) calc(var(--i) * 70ms),translate .9s var(--ease) calc(var(--i) * 70ms)}
+.feed.entrou .post{opacity:1;translate:0 0}
 .post::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(15,14,12,.8));opacity:0;transition:opacity .4s}
 .post p{position:absolute;left:1rem;right:1rem;bottom:1rem;margin:0;color:#fff;font:400 1.08rem/1.35 var(--serif);z-index:1;opacity:0;translate:0 10px;transition:opacity .45s var(--ease),translate .45s var(--ease)}
 .post:hover img{scale:1.05}
@@ -354,6 +358,7 @@ html:not(.js) .revela{opacity:1;translate:none}
   .revela{opacity:1;translate:none}
   .hero img{scale:1.02;translate:none}.hero .wrap{opacity:1;translate:none}
   .faixa{-webkit-mask-image:none;mask-image:none}.faixa ul{animation:none;flex-wrap:wrap;justify-content:center;flex-shrink:1;row-gap:1rem}.faixa ul+ul{display:none}
+  .feed .post{opacity:1;translate:none}
 }
 </style>
 </head>
@@ -516,8 +521,8 @@ html:not(.js) .revela{opacity:1;translate:none}
     </div>
   </div>
   <div class="faixa">
-    <ul aria-label="Empresas atendidas"><li>Pricyla Tomaz Estética Avançada</li><li>Técnica Benelli</li><li>Italinda</li><li>ELEV. Odontologia</li><li>Eletroed</li><li>Águia Digital</li><li>Florybal Itabira</li><li>Drika Monteiro Concept</li></ul>
-    <ul aria-hidden="true"><li>Pricyla Tomaz Estética Avançada</li><li>Técnica Benelli</li><li>Italinda</li><li>ELEV. Odontologia</li><li>Eletroed</li><li>Águia Digital</li><li>Florybal Itabira</li><li>Drika Monteiro Concept</li></ul>
+    <ul aria-label="Empresas atendidas"><li><img src="assets/img/logo-pricyla.svg" alt="Pricyla Tomaz Estética Avançada" width="1469" height="909" style="--h:64" loading="lazy"></li><li><img src="assets/img/logo-benelli.svg" alt="Técnica Benelli" width="934" height="349" style="--h:40" loading="lazy"></li><li><img src="assets/img/logo-italinda.svg" alt="Italinda" width="933" height="235" style="--h:34" loading="lazy"></li><li><img src="assets/img/logo-eletroed.svg" alt="Eletroed" width="1074" height="1066" style="--h:58" loading="lazy"></li><li><img src="assets/img/logo-aguia.svg" alt="Águia Digital" width="719" height="767" style="--h:52" loading="lazy"></li><li><img src="assets/img/logo-florybal.svg" alt="Florybal" width="924" height="611" style="--h:50" loading="lazy"></li><li><img src="assets/img/logo-drika.svg" alt="Drika Monteiro Concept" width="886" height="534" style="--h:48" loading="lazy"></li></ul>
+    <ul aria-hidden="true"><li><img src="assets/img/logo-pricyla.svg" alt="" width="1469" height="909" style="--h:64" loading="lazy"></li><li><img src="assets/img/logo-benelli.svg" alt="" width="934" height="349" style="--h:40" loading="lazy"></li><li><img src="assets/img/logo-italinda.svg" alt="" width="933" height="235" style="--h:34" loading="lazy"></li><li><img src="assets/img/logo-eletroed.svg" alt="" width="1074" height="1066" style="--h:58" loading="lazy"></li><li><img src="assets/img/logo-aguia.svg" alt="" width="719" height="767" style="--h:52" loading="lazy"></li><li><img src="assets/img/logo-florybal.svg" alt="" width="924" height="611" style="--h:50" loading="lazy"></li><li><img src="assets/img/logo-drika.svg" alt="" width="886" height="534" style="--h:48" loading="lazy"></li></ul>
   </div>
   <div class="wrap">
     <div class="vitrine">
@@ -888,10 +893,43 @@ html:not(.js) .revela{opacity:1;translate:none}
     ['C5JWgWzr0pO', 'r', 'Um projeto original, atemporal e personalizado, nos mínimos detalhes.'],
   ];
   const feed = $('#feed');
-  feed.innerHTML = posts.map(([c, t, txt]) => `<a class="post" href="https://www.instagram.com/${t === 'r' ? 'reel' : 'p'}/${c}/" target="_blank" rel="noopener" aria-label="${txt ? 'Post: ' + txt : 'Post do Instagram'} (abre o Instagram)"><img src="assets/img/ig-${c}.webp" alt="" width="600" height="750" loading="lazy">${t !== 'p' ? `<svg class="tipo" aria-hidden="true"><use href="#i-${t === 'r' ? 'play' : 'carrossel'}"/></svg>` : ''}${txt ? `<p>${txt}</p>` : ''}</a>`).join('');
+  feed.innerHTML = [...posts, ...posts].map(([c, t, txt], i) => `<a class="post" style="--i:${Math.min(i % posts.length, 8)}"${i >= posts.length ? ' aria-hidden="true" tabindex="-1"' : ''} href="https://www.instagram.com/${t === 'r' ? 'reel' : 'p'}/${c}/" target="_blank" rel="noopener" aria-label="${txt ? 'Post: ' + txt : 'Post do Instagram'} (abre o Instagram)"><img src="assets/img/ig-${c}.webp" alt="" width="600" height="750" loading="lazy">${t !== 'p' ? `<svg class="tipo" aria-hidden="true"><use href="#i-${t === 'r' ? 'play' : 'carrossel'}"/></svg>` : ''}${txt ? `<p>${txt}</p>` : ''}</a>`).join('');
+  // rolagem contínua: a segunda metade é cópia da primeira, então voltar uma volta inteira não aparece.
+  // Para com o mouse em cima, com foco e por 3 s depois de toque, arrasto ou seta
+  let volta = 0, pos = 0, ultimo = 0, pausaAte = 0, sobre = false, vivo = false;
+  const mede = () => { volta = feed.children[posts.length].offsetLeft - feed.children[0].offsetLeft; };
+  mede(); addEventListener('resize', mede);
+  const segura = (ms) => { pausaAte = performance.now() + ms; };
+  const anda = (t) => {
+    const dt = Math.min(t - ultimo, 64); ultimo = t;
+    if (vivo && !sobre && t > pausaAte) {
+      pos += dt * 0.036;
+      if (pos >= volta) pos -= volta;
+      feed.scrollLeft = pos;
+    } else pos = feed.scrollLeft;
+    requestAnimationFrame(anda);
+  };
+  const ajusta = () => { if (feed.scrollLeft >= volta) feed.scrollLeft -= volta; else if (feed.scrollLeft < 1) feed.scrollLeft += volta; pos = feed.scrollLeft; };
+  feed.addEventListener('scrollend', () => { if (performance.now() < pausaAte) ajusta(); });
+  feed.addEventListener('pointerenter', (e) => { if (e.pointerType === 'mouse') sobre = true; });
+  feed.addEventListener('pointerleave', () => { sobre = false; });
+  feed.addEventListener('focusin', () => { sobre = true; });
+  feed.addEventListener('focusout', () => { sobre = false; });
+  ['pointerdown', 'touchstart', 'wheel'].forEach(ev => feed.addEventListener(ev, () => segura(3000), { passive: true }));
   const passo = () => feed.querySelector('.post').offsetWidth * 2;
-  $('#feed-ant').addEventListener('click', () => feed.scrollBy({ left: -passo(), behavior: reduz ? 'auto' : 'smooth' }));
-  $('#feed-prox').addEventListener('click', () => feed.scrollBy({ left: passo(), behavior: reduz ? 'auto' : 'smooth' }));
+  const seta = (dir) => {
+    segura(3000);
+    if (dir > 0 && feed.scrollLeft + passo() > volta) feed.scrollLeft -= volta;
+    if (dir < 0 && feed.scrollLeft - passo() < 0) feed.scrollLeft += volta;
+    feed.scrollBy({ left: dir * passo(), behavior: reduz ? 'auto' : 'smooth' });
+  };
+  $('#feed-ant').addEventListener('click', () => seta(-1));
+  $('#feed-prox').addEventListener('click', () => seta(1));
+  new IntersectionObserver(([e]) => {
+    if (e.isIntersecting && !feed.classList.contains('entrou')) { feed.classList.add('entrou'); segura(reduz ? 0 : 1500); }
+    vivo = e.isIntersecting && !reduz;
+  }, { threshold: 0.2 }).observe(feed);
+  requestAnimationFrame(anda);
   $('#fc-fechar').addEventListener('click', () => dlg.close());
   $('#fc-ant').addEventListener('click', () => mostra(atual - 1));
   $('#fc-prox').addEventListener('click', () => mostra(atual + 1));
