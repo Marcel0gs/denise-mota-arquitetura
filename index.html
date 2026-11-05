@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>document.documentElement.classList.add('js')</script>
 <title>Denise Mota Arquitetura | Arquitetura e interiores em Itabira, MG</title>
-<meta name="description" content="Projetos residenciais de arquitetura e interiores em Itabira, MG. Atendimento presencial na região e online para todo o Brasil. Nota 5,0 no Google.">
+<meta name="description" content="Arquitetura e interiores para casas e empresas em Itabira, MG. Atendimento presencial na região e online para todo o Brasil. Nota 5,0 no Google.">
 <link rel="canonical" href="https://marcel0gs.github.io/denise-mota-arquitetura/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Denise Mota Arquitetura e Interiores">
-<meta property="og:description" content="Casas pensadas para quem vai viver nelas. Arquitetura e interiores residenciais em Itabira, MG, e online para todo o Brasil.">
+<meta property="og:description" content="Casas pensadas para quem vai viver nelas. Arquitetura e interiores residenciais e comerciais em Itabira, MG, e online para todo o Brasil.">
 <meta property="og:image" content="https://marcel0gs.github.io/denise-mota-arquitetura/assets/img/hero-1200.webp">
 <meta property="og:locale" content="pt_BR">
 <meta name="theme-color" content="#181715">
@@ -19,7 +19,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="assets/img/hero-1200.webp" imagesrcset="assets/img/hero-1200.webp 1200w, assets/img/hero-2000.webp 2000w" imagesizes="100vw" fetchpriority="high">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Denise Mota Arquitetura","description":"Projetos residenciais de arquitetura e interiores, presencial em Itabira e região e online para todo o Brasil.","url":"https://marcel0gs.github.io/denise-mota-arquitetura/","image":"https://marcel0gs.github.io/denise-mota-arquitetura/assets/img/hero-1200.webp","telephone":"+55 31 97163-3335","email":"denisemota.arquiteta@gmail.com","address":{"@type":"PostalAddress","streetAddress":"R. Suzinha de Sá Martins, 287, Sala 01, Esplanada da Estação","addressLocality":"Itabira","addressRegion":"MG","postalCode":"35900-209","addressCountry":"BR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"}],"areaServed":["Itabira","Minas Gerais","Brasil"],"sameAs":["https://maps.google.com/?cid=3645249256347178595","https://www.instagram.com/arquitetadenisemota/"]}
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Denise Mota Arquitetura","description":"Projetos de arquitetura e interiores residenciais e comerciais, presencial em Itabira e região e online para todo o Brasil.","url":"https://marcel0gs.github.io/denise-mota-arquitetura/","image":"https://marcel0gs.github.io/denise-mota-arquitetura/assets/img/hero-1200.webp","telephone":"+55 31 97163-3335","email":"denisemota.arquiteta@gmail.com","address":{"@type":"PostalAddress","streetAddress":"R. Suzinha de Sá Martins, 287, Sala 01, Esplanada da Estação","addressLocality":"Itabira","addressRegion":"MG","postalCode":"35900-209","addressCountry":"BR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"}],"areaServed":["Itabira","Minas Gerais","Brasil"],"sameAs":["https://maps.google.com/?cid=3645249256347178595","https://www.instagram.com/arquitetadenisemota/"]}
 </script>
 <style>
 :root{
@@ -168,7 +168,7 @@ html:not(.js) .revela{opacity:1;translate:none}
 .foto-cheia .setas{display:flex;gap:.6rem}
 
 /* serviços */
-.servicos .cartoes{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1rem,3vw,2.5rem);margin-top:3rem}
+.servicos .cartoes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,3vw,2.5rem);margin-top:3rem}
 .cartao{background:var(--branco);border:1px solid var(--linha)}
 .cartao .img{overflow:hidden;aspect-ratio:3/2}
 .cartao img{width:100%;height:100%;object-fit:cover;transition:scale 1.2s var(--ease)}
@@ -232,6 +232,31 @@ html:not(.js) .revela{opacity:1;translate:none}
 .caso h3{font-size:clamp(1.6rem,2.4vw,2.1rem);margin:1.3rem 0 .6rem}
 .caso p{color:var(--tinta-2);margin:0;font-size:.98rem}
 @media (max-width:900px){.casos{grid-template-columns:1fr;gap:2.6rem}.caso .capa{aspect-ratio:4/3}}
+
+/* empresas atendidas */
+.empresas{background:var(--noite);color:var(--papel);overflow:clip}
+.empresas .cabeca{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:1.6rem clamp(2rem,6vw,6rem);align-items:end}
+.empresas .rotulo{color:var(--bronze-claro)}
+.empresas .rotulo b{color:rgba(244,239,231,.6)}
+.empresas h2 em{color:var(--bronze-claro)}
+.empresas .cabeca>p{color:rgba(244,239,231,.75);margin:0}
+.faixa{display:flex;overflow:hidden;margin:clamp(2.6rem,5vw,4rem) 0;padding:1.5rem 0;border-block:1px solid rgba(244,239,231,.14);-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.faixa ul{display:flex;flex-shrink:0;margin:0;padding:0;list-style:none;animation:faixa 44s linear infinite}
+.faixa:hover ul{animation-play-state:paused}
+.faixa li{display:flex;align-items:center;white-space:nowrap;font:400 clamp(1.45rem,2.6vw,2.2rem)/1.1 var(--serif)}
+.faixa li::after{content:"";width:6px;height:6px;margin:0 clamp(1.4rem,3vw,2.6rem);background:var(--bronze-claro);rotate:45deg}
+@keyframes faixa{to{translate:-100% 0}}
+.vitrine{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(1.8rem,2.6vw,2.4rem) clamp(.9rem,1.8vw,1.6rem)}
+.caso.emp .capa{aspect-ratio:4/5;background:#262420}
+.caso.emp .tag{background:rgba(24,23,21,.8);color:var(--papel);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.caso.emp .tag.real{background:var(--papel);color:var(--tinta)}
+.caso.emp h3{font-size:clamp(1.3rem,1.9vw,1.65rem);margin:1rem 0 .35rem}
+.caso.emp p{color:rgba(244,239,231,.6);font-size:.9rem;line-height:1.45}
+.empresas .fim{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.4rem 2rem;margin-top:clamp(2.6rem,5vw,3.6rem);padding-top:1.8rem;border-top:1px solid rgba(244,239,231,.14)}
+.empresas .legenda{color:rgba(244,239,231,.55);font-size:.86rem;max-width:60ch;margin:0}
+@media (max-width:1000px){.vitrine{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:820px){.empresas .cabeca{grid-template-columns:1fr}}
+@media (max-width:560px){.caso.emp .tag{top:.6rem;left:.6rem;padding:.45rem .55rem;font-size:.56rem;letter-spacing:.12em}.caso.emp .qtd{display:none}.caso.emp h3{font-size:1.15rem;margin-top:.8rem}.caso.emp p{font-size:.8rem}}
 
 /* depoimentos: painel do Google + carrossel */
 .depo{background:var(--papel-2)}
@@ -328,6 +353,7 @@ html:not(.js) .revela{opacity:1;translate:none}
   *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
   .revela{opacity:1;translate:none}
   .hero img{scale:1.02;translate:none}.hero .wrap{opacity:1;translate:none}
+  .faixa{-webkit-mask-image:none;mask-image:none}.faixa ul{animation:none;flex-wrap:wrap;justify-content:center;flex-shrink:1;row-gap:1rem}.faixa ul+ul{display:none}
 }
 </style>
 </head>
@@ -359,6 +385,7 @@ html:not(.js) .revela{opacity:1;translate:none}
     </a>
     <nav class="nav" aria-label="Seções">
       <a href="#projetos">Projetos</a>
+      <a href="#empresas">Empresas</a>
       <a href="#servicos">Serviços</a>
       <a href="#processo">Processo</a>
       <a href="#depoimentos">Depoimentos</a>
@@ -374,7 +401,7 @@ html:not(.js) .revela{opacity:1;translate:none}
   <div class="wrap">
     <p class="rotulo entra">Arquitetura e interiores · Itabira, MG</p>
     <h1 class="entra">Casas pensadas para quem vai <em>viver nelas.</em></h1>
-    <p class="sub entra">Projetos residenciais de arquitetura e interiores, com atendimento presencial em Itabira e região e online para todo o Brasil.</p>
+    <p class="sub entra">Arquitetura e interiores para casas e empresas, com atendimento presencial em Itabira e região e online para todo o Brasil.</p>
     <div class="acoes entra">
       <a class="btn btn--claro" href="https://wa.me/5531971633335?text=Ol%C3%A1%2C%20Denise!%20Vi%20seu%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Conversar sobre meu projeto</a>
       <a class="btn btn--vazado" href="#projetos">Ver projetos</a>
@@ -478,10 +505,68 @@ html:not(.js) .revela{opacity:1;translate:none}
   </div>
 </section>
 
-<section class="projetos" id="projetos" style="padding-top:0">
+<section class="empresas" id="empresas">
+  <div class="wrap">
+    <div class="cabeca revela">
+      <div>
+        <p class="rotulo"><b>05</b> Empresas atendidas</p>
+        <h2>Um projeto comercial não é só estética. <em>É estratégia.</em></h2>
+      </div>
+      <p>Cada escolha no espaço de uma empresa comunica algo. Denise projeta lojas, clínicas, escritórios e fachadas pensando na experiência de quem chega e em como a marca aparece no ambiente: o letreiro, a luz, os materiais e o caminho da calçada ao balcão.</p>
+    </div>
+  </div>
+  <div class="faixa">
+    <ul aria-label="Empresas atendidas"><li>Pricyla Tomaz Estética Avançada</li><li>Técnica Benelli</li><li>Italinda</li><li>ELEV. Odontologia</li><li>Eletroed</li><li>Águia Digital</li><li>Florybal Itabira</li><li>Drika Monteiro Concept</li></ul>
+    <ul aria-hidden="true"><li>Pricyla Tomaz Estética Avançada</li><li>Técnica Benelli</li><li>Italinda</li><li>ELEV. Odontologia</li><li>Eletroed</li><li>Águia Digital</li><li>Florybal Itabira</li><li>Drika Monteiro Concept</li></ul>
+  </div>
+  <div class="wrap">
+    <div class="vitrine">
+      <button class="caso emp revela" type="button" data-caso="emp-pricyla">
+        <span class="capa"><img src="assets/img/emp-pricyla-01-800.webp" alt="Recepção da clínica Pricyla Tomaz com letreiro dourado iluminado sobre painel de madeira" loading="lazy"><span class="tag real">Foto da obra</span><span class="qtd">3 fotos</span></span>
+        <h3>Pricyla Tomaz</h3><p>Clínica de estética avançada</p>
+      </button>
+      <button class="caso emp revela" type="button" data-caso="emp-benelli">
+        <span class="capa"><img src="assets/img/emp-benelli-01-800.webp" alt="Imagem 3D da fachada da nova sede da Técnica Benelli, com letreiro iluminado e jardim" loading="lazy" style="object-position:50% 48%"><span class="tag">Imagem em 3D</span><span class="qtd">1 imagem</span></span>
+        <h3>Técnica Benelli</h3><p>Nova sede · Belo Horizonte</p>
+      </button>
+      <button class="caso emp revela" type="button" data-caso="emp-italinda">
+        <span class="capa"><img src="assets/img/emp-italinda-01-800.webp" alt="Fachada da loja Italinda depois da reforma, com letreiro retroiluminado" loading="lazy"><span class="tag real">Antes e depois</span><span class="qtd">2 fotos</span></span>
+        <h3>Italinda</h3><p>Nova fachada da loja</p>
+      </button>
+      <button class="caso emp revela" type="button" data-caso="emp-elev">
+        <span class="capa"><img src="assets/img/emp-elev-01-800.webp" alt="Imagem 3D do consultório da ELEV. Odontologia, em tons neutros e luz suave" loading="lazy" style="object-position:78% 50%"><span class="tag">Imagem em 3D</span><span class="qtd">6 imagens</span></span>
+        <h3>ELEV. Odontologia</h3><p>Clínica odontológica · Itabira</p>
+      </button>
+      <button class="caso emp revela" type="button" data-caso="emp-eletroed">
+        <span class="capa"><img src="assets/img/emp-eletroed-01-800.webp" alt="Fachada da loja Eletroed, com moldura laranja e letreiro" loading="lazy"><span class="tag real">Foto da obra</span><span class="qtd">2 fotos</span></span>
+        <h3>Eletroed</h3><p>Fachada comercial · Itabira</p>
+      </button>
+      <button class="caso emp revela" type="button" data-caso="emp-aguia">
+        <span class="capa"><img src="assets/img/emp-aguia-01-800.webp" alt="Imagem 3D da sala de reunião da Águia Digital, com a marca iluminada em verde" loading="lazy" style="object-position:62% 50%"><span class="tag">Imagem em 3D</span><span class="qtd">4 imagens</span></span>
+        <h3>Águia Digital</h3><p>Escritório · João Monlevade</p>
+      </button>
+      <button class="caso emp revela" type="button" data-caso="emp-florybal">
+        <span class="capa"><img src="assets/img/emp-florybal-01-800.webp" alt="Interior da loja Florybal em Itabira, com prateleiras de chocolates" loading="lazy"><span class="tag real">Foto da obra</span><span class="qtd">1 foto</span></span>
+        <h3>Florybal Itabira</h3><p>Loja de chocolates</p>
+      </button>
+      <button class="caso emp revela" type="button" data-caso="emp-drika">
+        <span class="capa"><img src="assets/img/emp-drika-01-800.webp" alt="Imagem 3D da fachada da loja Drika Monteiro Concept, com arco e vitrine" loading="lazy"><span class="tag">Imagem em 3D</span><span class="qtd">5 imagens</span></span>
+        <h3>Drika Monteiro Concept</h3><p>Loja de moda</p>
+      </button>
+    </div>
+    <div class="fim revela">
+      <p class="legenda">Fotos da obra e imagens em 3D publicadas no Instagram da Denise e das empresas. Na Pricyla Tomaz e na Italinda, a comunicação visual foi executada pela ArtPrint.</p>
+      <div class="acoes">
+        <a class="btn btn--claro" href="https://wa.me/5531971633335?text=Ol%C3%A1%2C%20Denise!%20Vi%20seu%20site%20e%20gostaria%20de%20falar%20sobre%20um%20projeto%20para%20a%20minha%20empresa." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Projeto para a minha empresa</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="projetos" id="projetos">
   <div class="wrap">
     <div class="revela">
-      <p class="rotulo"><b>05</b> Portfólio</p>
+      <p class="rotulo"><b>06</b> Portfólio</p>
       <h2>Casas, ambientes <em>e detalhes.</em></h2>
       <p style="color:var(--tinta-2);max-width:56ch;margin-top:1.4rem">Imagens em 3D de projetos residenciais do escritório. Toque em qualquer imagem para ver em tela cheia.</p>
     </div>
@@ -509,17 +594,21 @@ html:not(.js) .revela{opacity:1;translate:none}
 <section class="servicos" id="servicos" style="padding-top:0">
   <div class="wrap">
     <div class="revela">
-      <p class="rotulo"><b>06</b> Serviços</p>
+      <p class="rotulo"><b>07</b> Serviços</p>
       <h2>Da fachada <em>à última prateleira.</em></h2>
     </div>
     <div class="cartoes">
       <article class="cartao revela">
-        <div class="img"><img src="assets/img/fachada-01-800.webp" srcset="assets/img/fachada-01-800.webp 800w, assets/img/fachada-01-1600.webp 1600w" sizes="(max-width:820px) 100vw, 600px" alt="Fachada residencial em dois pavimentos com pedra e iluminação" loading="lazy"></div>
+        <div class="img"><img src="assets/img/fachada-01-800.webp" srcset="assets/img/fachada-01-800.webp 800w, assets/img/fachada-01-1600.webp 1600w" sizes="(max-width:820px) 100vw, 420px" alt="Fachada residencial em dois pavimentos com pedra e iluminação" loading="lazy"></div>
         <div class="txt"><h3>Arquitetura residencial</h3><p>Casa nova ou reforma. O desenho dos espaços, da fachada e da relação da casa com o terreno, pensado para a rotina de quem vai morar ali.</p></div>
       </article>
       <article class="cartao revela">
-        <div class="img"><img src="assets/img/estar-05-800.webp" srcset="assets/img/estar-05-800.webp 800w, assets/img/estar-05-1600.webp 1600w" sizes="(max-width:820px) 100vw, 600px" alt="Sala de estar e jantar integradas, com poltronas azuis e painel ripado" loading="lazy"></div>
+        <div class="img"><img src="assets/img/estar-05-800.webp" srcset="assets/img/estar-05-800.webp 800w, assets/img/estar-05-1600.webp 1600w" sizes="(max-width:820px) 100vw, 420px" alt="Sala de estar e jantar integradas, com poltronas azuis e painel ripado" loading="lazy"></div>
         <div class="txt"><h3>Interiores residenciais</h3><p>Ambientes completos: marcenaria, iluminação, revestimentos, cores e mobiliário, para cada cômodo ter a cara da família e funcionar no dia a dia.</p></div>
+      </article>
+      <article class="cartao revela">
+        <div class="img"><img src="assets/img/emp-elev-02-800.webp" srcset="assets/img/emp-elev-02-800.webp 800w, assets/img/emp-elev-02-1600.webp 1600w" sizes="(max-width:820px) 100vw, 420px" alt="Imagem 3D de consultório odontológico com a marca da clínica na parede" loading="lazy"></div>
+        <div class="txt"><h3>Projetos comerciais</h3><p>Lojas, clínicas, escritórios e fachadas. Layout, iluminação, materiais e a marca aplicada no ambiente, pensados para a experiência do cliente e para a rotina de quem trabalha ali.</p></div>
       </article>
     </div>
     <div class="modo revela">
@@ -549,7 +638,7 @@ html:not(.js) .revela{opacity:1;translate:none}
 <section class="processo" id="processo">
   <div class="wrap">
     <div class="revela">
-      <p class="rotulo"><b style="color:rgba(244,239,231,.6)">07</b> Processo</p>
+      <p class="rotulo"><b style="color:rgba(244,239,231,.6)">08</b> Processo</p>
       <h2>Como o projeto <em>acontece.</em></h2>
     </div>
     <ol class="etapas">
@@ -564,7 +653,7 @@ html:not(.js) .revela{opacity:1;translate:none}
 <section class="depo" id="depoimentos">
   <div class="wrap">
     <div class="revela">
-      <p class="rotulo"><b>08</b> Depoimentos</p>
+      <p class="rotulo"><b>09</b> Depoimentos</p>
       <h2>Quem já confiou <em>a casa à Denise.</em></h2>
     </div>
     <div class="aval">
@@ -592,7 +681,7 @@ html:not(.js) .revela{opacity:1;translate:none}
   <div class="wrap">
     <div class="cabeca revela">
       <div>
-        <p class="rotulo"><b>09</b> Instagram</p>
+        <p class="rotulo"><b>10</b> Instagram</p>
         <h2>O dia a dia <em>do escritório.</em></h2>
         <a class="perfil" href="https://www.instagram.com/arquitetadenisemota/" target="_blank" rel="noopener">
           <img src="assets/img/ig-DZ1T6lujL-V.webp" alt="" width="76" height="76" loading="lazy">
@@ -613,7 +702,7 @@ html:not(.js) .revela{opacity:1;translate:none}
   <img class="fundo" src="assets/img/lazer-05-1600.webp" srcset="assets/img/lazer-05-800.webp 800w, assets/img/lazer-05-1600.webp 1280w" sizes="100vw" alt="" loading="lazy">
   <div class="wrap">
     <div class="revela">
-      <p class="rotulo"><b style="color:rgba(244,239,231,.6)">10</b> Contato</p>
+      <p class="rotulo"><b style="color:rgba(244,239,231,.6)">11</b> Contato</p>
       <h2>Vamos conversar <em>sobre a sua casa?</em></h2>
       <p class="chamada">Conte em poucas palavras o que você tem em mente: construir, reformar ou repensar os ambientes. A primeira conversa é pelo WhatsApp.</p>
       <a class="btn btn--claro" href="https://wa.me/5531971633335?text=Ol%C3%A1%2C%20Denise!%20Vi%20seu%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Chamar no WhatsApp</a>
@@ -728,7 +817,7 @@ html:not(.js) .revela{opacity:1;translate:none}
     $('#fc-cat').textContent = it.nome;
     $('#fc-n').textContent = String(atual + 1).padStart(2, '0') + ' / ' + String(lista.length).padStart(2, '0');
   };
-  const abre = (itens, i) => { lista = itens; mostra(i); dlg.showModal(); };
+  const abre = (itens, i) => { lista = itens; $('#foto-cheia .setas').style.visibility = itens.length > 1 ? '' : 'hidden'; mostra(i); dlg.showModal(); };
   grade.addEventListener('click', (e) => { const b = e.target.closest('button'); if (b) abre(listaGrade, +b.dataset.i); });
 
   // projetos de clientes: cada um abre a sua sequência na tela cheia
@@ -736,10 +825,19 @@ html:not(.js) .revela{opacity:1;translate:none}
     helena: { n: 6, nome: 'O quarto da Helena · obra entregue', alt: 'Foto real do quarto da Helena, projeto de Denise Mota' },
     casa: { n: 7, nome: 'Uma casa feita nas conversas', alt: 'Imagem 3D da casa projetada por Denise Mota' },
     ampliacao: { n: 4, nome: 'Ampliação', alt: 'Imagem 3D da ampliação projetada por Denise Mota' },
+    // empresas atendidas
+    'emp-pricyla': { n: 3, nome: 'Pricyla Tomaz Estética Avançada · foto da obra', alt: 'Foto da clínica Pricyla Tomaz Estética Avançada, projeto de Denise Mota' },
+    'emp-benelli': { n: 1, nome: 'Técnica Benelli · imagem em 3D', alt: 'Imagem 3D da nova sede da Técnica Benelli, projeto de Denise Mota' },
+    'emp-italinda': { n: 2, nomes: ['Italinda · depois', 'Italinda · antes'], alt: 'Foto da fachada da loja Italinda, projeto de Denise Mota' },
+    'emp-elev': { n: 6, nome: 'ELEV. Odontologia · imagem em 3D', alt: 'Imagem 3D da clínica ELEV. Odontologia, projeto de Denise Mota' },
+    'emp-eletroed': { n: 2, nome: 'Eletroed · foto da obra', alt: 'Foto da fachada da Eletroed, projeto de Denise Mota' },
+    'emp-aguia': { n: 4, nome: 'Águia Digital · imagem em 3D', alt: 'Imagem 3D do escritório da Águia Digital, projeto de Denise Mota' },
+    'emp-florybal': { n: 1, nome: 'Florybal Itabira · foto da obra', alt: 'Foto da loja Florybal em Itabira, projeto de Denise Mota' },
+    'emp-drika': { n: 5, nome: 'Drika Monteiro Concept · imagem em 3D', alt: 'Imagem 3D da loja Drika Monteiro Concept, projeto de Denise Mota' },
   };
   document.querySelectorAll('[data-caso]').forEach(b => b.addEventListener('click', () => {
     const c = casos[b.dataset.caso];
-    abre(Array.from({ length: c.n }, (_, i) => ({ f: b.dataset.caso + '-' + String(i + 1).padStart(2, '0'), nome: c.nome, alt: c.alt })), 0);
+    abre(Array.from({ length: c.n }, (_, i) => ({ f: b.dataset.caso + '-' + String(i + 1).padStart(2, '0'), nome: c.nomes ? c.nomes[i] : c.nome, alt: c.alt })), 0);
   }));
 
   // depoimentos: um por vez, troca sozinho a cada 7 s (para no hover, no foco e ao tocar)
