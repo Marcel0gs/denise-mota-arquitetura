@@ -1153,9 +1153,16 @@ html:not(.js) .revela{opacity:1;translate:none}
     .map(f => todas.find(x => x.f === f));
   const grade = $('#grade'), verTodos = $('#ver-todos');
   let lista = destaques, listaGrade = destaques;
+  // a foto da grade pede o tamanho que a coluna ocupa: a estreita do celular baixa a de 500 ou
+  // 600 px, e nao a de 800 px que antes ela pagava inteira. As colunas largas seguem com a de 800 px.
+  const sizesDaFoto = (i) => {
+    const largaNoCelular = (i + 1) % 5 === 1;                      // .grade button:nth-child(5n+1)
+    const largaNoDesktop = (i + 1) % 10 === 1 || (i + 1) % 10 === 7;  // 10n+1 e 10n+7
+    return `${largaNoCelular ? '(max-width:700px) 89vw' : '(max-width:700px) 43vw'}, ${largaNoDesktop ? '58vw' : '27vw'}`;
+  };
   const monta = (itens) => {
     listaGrade = itens;
-    grade.innerHTML = itens.map((it, i) => `<button type="button" data-i="${i}" style="animation-delay:${Math.min(i, 11) * 40}ms" aria-label="Ampliar: ${it.nome}"><img src="assets/img/${it.f}-800.webp" alt="${it.alt}" loading="lazy" decoding="async"><span>${it.nome}</span></button>`).join('');
+    grade.innerHTML = itens.map((it, i) => `<button type="button" data-i="${i}" style="animation-delay:${Math.min(i, 11) * 40}ms" aria-label="Ampliar: ${it.nome}"><img src="assets/img/${it.f}-500.webp" srcset="assets/img/${it.f}-500.webp 500w, assets/img/${it.f}-600.webp 600w, assets/img/${it.f}-800.webp 800w" sizes="${sizesDaFoto(i)}" alt="${it.alt}" loading="lazy" decoding="async"><span>${it.nome}</span></button>`).join('');
   };
   const filtros = document.querySelectorAll('#filtros button');
   const escolhe = (cat) => {
