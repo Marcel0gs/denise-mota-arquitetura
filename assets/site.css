@@ -71,6 +71,23 @@ p{margin:0 0 1em}
 .selos{display:flex;flex-wrap:wrap;gap:.6rem 2rem;margin-top:2rem}
 .nota{display:inline-flex;align-items:center;gap:.6rem;font:400 .82rem/1.3 var(--sans);letter-spacing:.06em;text-decoration:none;opacity:.92}
 .nota .estrelas{color:var(--bronze-claro);letter-spacing:.12em}
+/* topo no celular no modelo do Box5 Estrelas (08/11/2026): texto e botões no pé da tela,
+   foto limpa em cima e escura só do meio pra baixo, botões lado a lado, sem selos (o placar
+   e o Top of Mind têm seção própria mais abaixo) */
+@media (max-width:700px){
+  .hero{padding-block:0} /* o section{padding-block} geral deixava 72px mortos embaixo */
+  .hero::after{background:
+    linear-gradient(180deg,rgba(15,14,12,.6) 0,rgba(15,14,12,.2) 84px,rgba(15,14,12,0) 140px),
+    linear-gradient(180deg,rgba(15,14,12,0) 38%,rgba(15,14,12,.55) 52%,rgba(15,14,12,.88) 64%,rgba(15,14,12,.96) 80%)}
+  .hero .wrap{padding-top:96px;padding-bottom:calc(1.6rem + env(safe-area-inset-bottom))}
+  .hero h1{font-size:clamp(2rem,8.6vw,2.5rem);line-height:1.06;max-width:none}
+  .hero .rotulo{font-size:.68rem;letter-spacing:.14em}
+  .hero :is(.rotulo,h1,p.sub){text-shadow:0 2px 14px rgba(0,0,0,.7),0 1px 3px rgba(0,0,0,.5)}
+  .hero p.sub{margin:.85rem 0 1.4rem;font-size:.95rem;line-height:1.55}
+  .hero .acoes{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:stretch}
+  .hero .acoes .btn{width:100%;justify-content:center;padding-inline:.6rem}
+  .hero .selos{display:none}
+}
 .js .hero .entra{opacity:0;translate:0 24px;animation:sobe 1.1s var(--ease) forwards}
 .js .hero .entra:nth-child(2){animation-delay:.35s}.js .hero .entra:nth-child(3){animation-delay:.5s}
 .js .hero .entra:nth-child(4){animation-delay:.65s}.js .hero .entra:nth-child(5){animation-delay:.8s}

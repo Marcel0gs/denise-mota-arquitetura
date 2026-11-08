@@ -48,7 +48,7 @@
 {"@type":"Question","name":"Consigo ver como vai ficar antes da obra?","acceptedAnswer":{"@type":"Answer","text":"Sim. Os ambientes são apresentados em imagens 3D realistas, com materiais, luz e mobiliário, e ajustados com você antes de qualquer execução."}},
 {"@type":"Question","name":"Como peço um orçamento?","acceptedAnswer":{"@type":"Answer","text":"Pelo WhatsApp (31) 97163-3335. Conte o que você quer fazer, a cidade e o tamanho aproximado do espaço. O valor depende do tipo e do tamanho de cada projeto, por isso a proposta vem depois dessa primeira conversa."}}]}
 </script>
-<link rel="stylesheet" href="assets/site.css?v=4">
+<link rel="stylesheet" href="assets/site.css?v=6">
 <style>
 /* EXPERIMENTO (08/11/2026): interruptor de luz no topo. A fachada abre apagada e acende
    sozinha; o botão troca as duas versões do render. As duas imagens pegam as mesmas regras
@@ -63,9 +63,9 @@
   opacity:0;transition:opacity 1.6s ease .2s}
 .hero.acesa h1{color:#fff3e4}
 .hero.acesa h1::before{opacity:1}
-/* mora na linha dos botões: margin-left:auto empurra pra direita (no celular, ao lado do
-   "Ver projetos") e ele entra junto com eles, sem animação própria */
-.luz{margin-left:auto;display:inline-flex;align-items:center;gap:.75rem;
+/* último filho do .wrap: no PC fica no canto de baixo à direita; no celular sobe (order:-1)
+   e fica à direita, logo acima do rótulo, sobre a parte limpa da foto */
+.luz{position:absolute;right:0;bottom:clamp(2.5rem,8vh,5.5rem);display:inline-flex;align-items:center;gap:.75rem;
   padding:.45rem .5rem .45rem 1rem;border:1px solid rgba(255,253,249,.3);border-radius:99px;
   background:rgba(15,14,12,.32);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
   color:var(--branco);font:500 .7rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;cursor:pointer;
@@ -78,6 +78,9 @@
   transition:translate .45s var(--ease),box-shadow .6s ease}
 .luz[aria-pressed="true"] .luz__trilho{background:var(--bronze-claro)}
 .luz[aria-pressed="true"] .luz__bola{translate:18px 0;box-shadow:0 0 14px 3px rgba(255,210,150,.75)}
+.js .luz{opacity:0;translate:0 14px;animation:sobe 1.1s var(--ease) .9s forwards}
+html.com-intro:not(.intro-saindo) .luz{animation-play-state:paused}
+@media (max-width:700px){.luz{position:static;order:-1;align-self:flex-end;margin-bottom:1.1rem}}
 </style>
 </head>
 <body>
@@ -145,14 +148,14 @@
     <h1>Arquitetura que traduz<br class="so-desk"> <em>a sua essência</em><br class="so-desk"> em cada detalhe.</h1>
     <p class="sub entra">Arquitetura e interiores para casas e empresas, com atendimento presencial em Itabira e região e online para todo o Brasil.</p>
     <div class="acoes entra">
-      <a class="btn btn--claro" href="https://wa.me/5531971633335?text=Ol%C3%A1%2C%20Denise!%20Vi%20seu%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Conversar sobre meu projeto</a>
+      <a class="btn btn--claro" href="https://wa.me/5531971633335?text=Ol%C3%A1%2C%20Denise!%20Vi%20seu%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg><span>Conversar<span class="so-desk">&nbsp;sobre meu projeto</span></span></a>
       <a class="btn btn--vazado" href="portfolio.html">Ver projetos</a>
-      <button class="luz" id="luz" type="button" aria-pressed="false" hidden>Luzes<span class="luz__trilho" aria-hidden="true"><span class="luz__bola"></span></span></button>
     </div>
     <div class="selos entra">
       <a class="nota" href="https://maps.google.com/?cid=3645249256347178595" target="_blank" rel="noopener"><span class="estrelas" aria-hidden="true">★★★★★</span> 5,0 no Google, em 27 avaliações</a>
       <a class="nota" href="#reconhecimento"><span class="estrelas" aria-hidden="true">◆</span> Top of Mind 2026 em Itabira</a>
     </div>
+    <button class="luz" id="luz" type="button" aria-pressed="false" hidden>Luzes<span class="luz__trilho" aria-hidden="true"><span class="luz__bola"></span></span></button>
   </div>
 </section>
 
