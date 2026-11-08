@@ -19,7 +19,11 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Denise Mota Arquitetura e Interiores">
 <meta property="og:description" content="Arquitetura que traduz a sua essência em cada detalhe. Arquitetura e interiores residenciais e comerciais em Itabira, MG, e online para todo o Brasil.">
-<meta property="og:image" content="https://marcel0gs.github.io/denise-mota-arquitetura/assets/img/hero-1200.webp">
+<meta property="og:url" content="https://marcel0gs.github.io/denise-mota-arquitetura/">
+<meta property="og:image" content="https://marcel0gs.github.io/denise-mota-arquitetura/assets/img/og-1200.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:locale" content="pt_BR">
 <meta name="theme-color" content="#181715">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
@@ -42,475 +46,7 @@
 {"@type":"Question","name":"Consigo ver como vai ficar antes da obra?","acceptedAnswer":{"@type":"Answer","text":"Sim. Os ambientes são apresentados em imagens 3D realistas, com materiais, luz e mobiliário, e ajustados com você antes de qualquer execução."}},
 {"@type":"Question","name":"Como peço um orçamento?","acceptedAnswer":{"@type":"Answer","text":"Pelo WhatsApp (31) 97163-3335. Conte o que você quer fazer, a cidade e o tamanho aproximado do espaço. O valor depende do tipo e do tamanho de cada projeto, por isso a proposta vem depois dessa primeira conversa."}}]}
 </script>
-<style>
-:root{
-  --papel:#f4efe7;--papel-2:#ebe4d8;--linha:#d8cebe;--tinta:#1d1b18;--tinta-2:#57504a;
-  --bronze:#7a5b3e;--bronze-claro:#c3a07a;--noite:#181715;--branco:#fffdf9;
-  --serif:'Instrument Serif',Georgia,'Times New Roman',serif;--sans:'Jost',system-ui,sans-serif;
-  --g:clamp(16px,4.5vw,56px);--max:1240px;--ease:cubic-bezier(.2,.7,.2,1);
-}
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--papel);color:var(--tinta);font:300 1.0625rem/1.7 var(--sans);overflow-x:clip}
-img{display:block;max-width:100%}
-a{color:inherit}
-h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08;margin:0;letter-spacing:-.01em}
-h2{font-size:clamp(2.2rem,5.2vw,4rem)}
-h2 em,h1 em{font-style:italic;color:var(--bronze)}
-p{margin:0 0 1em}
-.skip{position:absolute;left:-999px;top:8px;background:var(--tinta);color:var(--branco);padding:.6rem 1rem;z-index:100}
-.skip:focus{left:8px}
-:focus-visible{outline:2px solid var(--bronze-claro);outline-offset:3px}
-.wrap{width:min(var(--max),100% - 2*var(--g));margin-inline:auto}
-.rotulo{display:flex;align-items:center;gap:.9rem;font:500 .74rem/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--bronze);margin-bottom:1.6rem}
-.rotulo::before{content:"";width:2.4rem;height:1px;background:currentColor}
-.rotulo b{font-weight:500;color:var(--tinta-2);letter-spacing:.1em}
-
-/* botões: brilho diagonal só no hover (padrão validado) */
-.btn{position:relative;isolation:isolate;overflow:hidden;display:inline-flex;align-items:center;gap:.7rem;
-  background:var(--tinta);color:var(--branco);border:1px solid var(--tinta);border-radius:3px;
-  padding:1rem 1.7rem;font:500 .8rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;cursor:pointer;
-  transition:transform .25s var(--ease),box-shadow .3s ease,background .2s ease,border-color .3s ease}
-.btn svg{width:18px;height:18px;flex:none}
-.btn::before{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;z-index:-1;
-  background:linear-gradient(115deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);transition:left .7s ease;pointer-events:none}
-.btn:hover,.btn:focus-visible{transform:translateY(-2px);border-color:var(--bronze-claro);box-shadow:0 14px 30px -12px rgba(29,27,24,.55)}
-.btn:hover::before,.btn:focus-visible::before{left:130%}
-.btn--claro{background:var(--papel);color:var(--tinta);border-color:var(--papel)}
-.btn--vazado{background:transparent;color:inherit;border-color:currentColor}
-.btn--vazado:hover{background:rgba(255,255,255,.06)}
-
-/* cabeçalho */
-.topo{position:fixed;inset:0 0 auto;z-index:50;color:var(--branco);transition:background .35s ease,color .35s ease,box-shadow .35s ease}
-.topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:76px}
-.topo.solido{background:rgba(244,239,231,.94);color:var(--tinta);box-shadow:0 1px 0 var(--linha);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
-.marca{display:flex;align-items:center;gap:.8rem;text-decoration:none}
-.marca svg{width:30px;height:33px;fill:currentColor}
-.marca span{display:flex;flex-direction:column;font:400 .95rem/1.05 var(--sans);letter-spacing:.3em;text-transform:uppercase}
-.marca small{font-size:.62rem;letter-spacing:.32em;opacity:.75;margin-top:.25rem;text-transform:lowercase}
-.nav{display:flex;align-items:center;gap:2rem;font:400 .78rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase}
-.nav a{text-decoration:none;opacity:.85;position:relative}
-.nav a:not(.btn)::after{content:"";position:absolute;left:0;right:100%;bottom:-6px;height:1px;background:currentColor;transition:right .35s var(--ease)}
-.nav a:hover{opacity:1}.nav a:not(.btn):hover::after{right:0}
-.nav .btn{padding:.8rem 1.2rem;font-size:.72rem;gap:0}
-.topo:not(.solido) .nav .btn{background:transparent;border-color:rgba(255,255,255,.6);color:var(--branco)}
-.so-desk{display:inline}
-@media (max-width:900px){.nav a:not(.btn){display:none}.so-desk{display:none}}
-
-/* hero: fica parado enquanto o resto da página passa por cima */
-.hero{position:sticky;top:0;height:100vh;height:100svh;min-height:560px;overflow:hidden;color:var(--branco);background:var(--noite);z-index:0;--s:0}
-.hero picture,.hero img{position:absolute;inset:0;width:100%;height:100%}
-.hero img{object-fit:cover;object-position:50% 62%;scale:calc(1.06 + var(--s)*.08);translate:0 calc(var(--s)*4%);transform-origin:50% 40%}
-.js .hero img{animation:abre 2.2s var(--ease) both}
-@keyframes abre{from{opacity:0;scale:1.14}}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,14,12,.55) 0%,rgba(15,14,12,0) 24%,rgba(15,14,12,0) 45%,rgba(15,14,12,.7) 100%),linear-gradient(90deg,rgba(15,14,12,.72) 0%,rgba(15,14,12,.45) 38%,rgba(15,14,12,0) 70%)}
-@media (max-width:700px){.hero::after{background:linear-gradient(180deg,rgba(15,14,12,.5) 0%,rgba(15,14,12,.15) 22%,rgba(15,14,12,.62) 48%,rgba(15,14,12,.9) 100%)}.hero img{object-position:42% 50%}}
-.hero .wrap{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-top:110px;padding-bottom:clamp(2.5rem,8vh,5.5rem);
-  opacity:calc(1 - var(--s)*1.6);translate:0 calc(var(--s)*-60px)}
-.hero .rotulo{color:var(--bronze-claro)}
-.hero h1{font-size:clamp(2.6rem,min(5.4vw,8.4vh),4.9rem);max-width:21ch;text-shadow:0 2px 30px rgba(0,0,0,.25)}
-@media (max-width:900px){.hero h1{max-width:14ch}}
-.hero h1 em{color:var(--bronze-claro)}
-.hero p.sub{max-width:52ch;margin:1.2rem 0 2rem;font-size:clamp(1rem,1.5vw,1.15rem);opacity:.9}
-.hero .acoes{display:flex;flex-wrap:wrap;gap:.9rem;align-items:center}
-.selos{display:flex;flex-wrap:wrap;gap:.6rem 2rem;margin-top:2rem}
-.nota{display:inline-flex;align-items:center;gap:.6rem;font:400 .82rem/1.3 var(--sans);letter-spacing:.06em;text-decoration:none;opacity:.92}
-.nota .estrelas{color:var(--bronze-claro);letter-spacing:.12em}
-.js .hero .entra{opacity:0;translate:0 24px;animation:sobe 1.1s var(--ease) forwards}
-.js .hero .entra:nth-child(2){animation-delay:.35s}.js .hero .entra:nth-child(3){animation-delay:.5s}
-.js .hero .entra:nth-child(4){animation-delay:.65s}.js .hero .entra:nth-child(5){animation-delay:.8s}
-@keyframes sobe{to{opacity:1;translate:0 0}}
-/* título do topo: cada palavra sobe e aparece.
-   Sem desfoque: o desfoque animado obriga o Chrome a redesenhar a letra a cada quadro, e a
-   borda do texto sai tremendo para um lado e para o outro (medido: 5,8 px de oscilação
-   contra 1,1 px sem o desfoque). Sem fresta, para a sombra do texto continuar inteira. */
-.js .hero h1:not(.partido){opacity:0}
-.js .hero h1 .pal{overflow:visible}
-.js .hero h1 .pal>span{opacity:0;translate:0 .42em;will-change:translate,opacity;animation:palavra 1s var(--ease) forwards;animation-delay:calc(var(--w) * 60ms + 180ms)}
-@keyframes palavra{to{opacity:1;translate:0 0}}
-.js .topo{animation:desce 1s var(--ease) .6s both}
-@keyframes desce{from{opacity:0;translate:0 -18px}}
-/* com a abertura, o topo espera a janela abrir pra começar a entrar */
-html.com-intro .hero img{animation:assenta 2.6s var(--ease) both}
-@keyframes assenta{from{scale:1.22}}
-html.com-intro:not(.intro-saindo) :is(.hero img,.hero .entra,.hero h1 .pal>span,.topo){animation-play-state:paused}
-
-/* abertura: só na primeira visita da sessão, nunca com "reduzir movimento".
-   A logo (uma planta baixa) se desenha em traço, o nome aparece com a fachada
-   do topo dentro das letras e a linha embaixo dele vira uma janela que abre e
-   mostra o topo de verdade. A janela são 4 painéis cujas medidas o JS escreve. */
-.intro{display:none}
-html.com-intro{scrollbar-gutter:stable}
-html.com-intro:not(.intro-fim){overflow:hidden;background:var(--noite)}
-html.com-intro:not(.intro-fim) .intro{display:block;position:fixed;inset:0;z-index:300;cursor:pointer;--t:50vh;--b:50vh;--l:50vw;--r:50vw}
-.intro__p{position:absolute;background:var(--noite)}
-.intro__p.c{inset:0 0 auto;height:calc(var(--t) + 1px)}
-.intro__p.f{inset:auto 0 0;height:calc(var(--b) + 1px)}
-.intro__p.e{inset:0 auto 0 0;width:calc(var(--l) + 1px)}
-.intro__p.d{inset:0 0 0 auto;width:calc(var(--r) + 1px)}
-.intro__moldura{position:absolute;border:1px solid var(--bronze-claro);opacity:0;pointer-events:none}
-.intro__cena{position:absolute;inset:0;transition:opacity .5s ease,scale 1.4s var(--ease)}
-.intro.sai .intro__cena{opacity:0;scale:1.05}
-.intro__grade{position:absolute;inset:0;opacity:0;animation:intro-luz 2s ease .1s forwards;
-  background:radial-gradient(closest-side,transparent 35%,var(--noite)),
-    linear-gradient(rgba(195,160,122,.08) 1px,transparent 1px) 50% 50%/64px 64px,
-    linear-gradient(90deg,rgba(195,160,122,.08) 1px,transparent 1px) 50% 50%/64px 64px}
-.intro__conteudo{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;text-align:center;padding:0 16px}
-.intro__marca{width:clamp(52px,6.5vw,76px);height:auto;aspect-ratio:366/398;margin-bottom:clamp(1.2rem,3vh,2rem);
-  fill:var(--papel);fill-opacity:0;stroke:var(--bronze-claro);stroke-width:5;stroke-dasharray:1;stroke-dashoffset:1;
-  animation:intro-traca 1.6s cubic-bezier(.55,.1,.3,1) .1s forwards,intro-enche .9s ease 1.3s forwards}
-.intro__nome{margin:0;font:400 clamp(3.3rem,13vw,10rem)/.95 var(--serif);letter-spacing:-.005em;white-space:nowrap}
-.intro__nome span{display:inline-block;padding:.02em .05em .12em;color:transparent;-webkit-text-fill-color:transparent;
-  background:var(--bronze-claro) url(assets/img/hero-1200.webp) no-repeat var(--x0,0%) 62%/190% auto;-webkit-background-clip:text;background-clip:text;
-  -webkit-text-stroke:.6px rgba(195,160,122,.45);
-  opacity:0;filter:blur(14px);translate:0 .2em;animation:intro-nome 1.4s var(--ease) .4s forwards,intro-pan 4.6s linear forwards}
-.intro__nome span:first-child{--x1:34%}
-.intro__nome span+span{--x0:30%;--x1:64%;animation-delay:.6s,0s}
-.intro__linha{display:block;width:0;height:1px;margin:clamp(1.1rem,2.6vh,1.6rem) 0 clamp(.9rem,2vh,1.2rem);background:var(--bronze-claro);animation:intro-linha 1.1s var(--ease) 1.05s forwards}
-.intro__lema{margin:0 -.42em 0 0;font:400 clamp(.66rem,1.6vw,.8rem)/1.4 var(--sans);letter-spacing:.42em;text-transform:uppercase;color:var(--bronze-claro);opacity:0;animation:intro-lema 1.2s var(--ease) 1.25s forwards}
-.intro__pular{position:absolute;right:16px;bottom:16px;font:500 .64rem/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:rgba(244,239,231,.5);opacity:0;animation:intro-luz .6s ease 1.4s forwards}
-@keyframes intro-luz{to{opacity:1}}
-@keyframes intro-traca{to{stroke-dashoffset:0}}
-@keyframes intro-enche{to{fill-opacity:1}}
-@keyframes intro-nome{to{opacity:1;filter:blur(0) brightness(1.3) saturate(1.1);translate:0 0}}
-@keyframes intro-pan{to{background-position:var(--x1,40%) 58%}}
-@keyframes intro-linha{to{width:min(300px,64vw)}}
-@keyframes intro-lema{from{letter-spacing:.8em;margin-right:-.8em}to{opacity:1}}
-
-/* tudo depois do hero é camada opaca por cima dele */
-.palco{position:relative;z-index:1;background:var(--papel);overflow:clip;will-change:transform;box-shadow:0 -30px 60px -20px rgba(0,0,0,.35)}
-section{padding-block:clamp(4.5rem,11vw,9rem)}
-.revela{opacity:0;translate:0 30px;transition:opacity .68s var(--ease),translate .68s var(--ease)}
-.revela.is-visible{opacity:1;translate:0 0}
-html:not(.js) .revela{opacity:1;translate:none}
-
-/* títulos das seções: cada palavra sobe de dentro de uma fresta quando a seção aparece */
-.pal{display:inline-block;overflow:clip;vertical-align:top;padding:.06em .09em .18em;margin:-.06em -.09em -.18em}
-.pal>span{display:inline-block}
-.js .palco .revela h2 .pal>span{translate:0 115%;transition:translate .8s var(--ease) calc(var(--w) * 45ms + 50ms)}
-.js .palco .revela.is-visible h2 .pal>span{translate:0 0}
-/* o traço do rótulo cresce */
-.js .revela .rotulo::before{width:0;transition:width .8s var(--ease) .1s}
-.js .revela.is-visible .rotulo::before{width:2.4rem}
-
-/* parallax de janela: a imagem é mais alta que a moldura e o JS anda com ela (propriedade translate) */
-.janela{display:block;position:relative;overflow:hidden}
-.janela-img{position:absolute!important;left:0;top:-9%;width:100%!important;height:118%!important}
-/* persiana: a foto sobe de baixo pra cima quando aparece.
-   A cortina e uma mascara, e nao um recorte: o elemento continua inteiro, entao o Chrome
-   decodifica a imagem na hora. Com recorte em inset(100%) o elemento fica sem area
-   pintada, a decodificacao ficava adiada e a foto aparecia segundos depois.
-   A cortina so abre com a imagem ja decodificada (classe .pronto, posta pelo JS): o
-   usuario nunca ve um retangulo vazio enquanto a foto nao chega. */
-.js .persiana{
-  -webkit-mask-image:linear-gradient(#000,#000);mask-image:linear-gradient(#000,#000);
-  -webkit-mask-size:100% 0%;mask-size:100% 0%;
-  -webkit-mask-position:bottom center;mask-position:bottom center;
-  -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
-  transition:-webkit-mask-size .9s var(--ease) calc(var(--d,0ms) + 50ms),mask-size .9s var(--ease) calc(var(--d,0ms) + 50ms)}
-.js .persiana.pronto{-webkit-mask-size:100% 100%;mask-size:100% 100%}
-/* a logo gigante em traço, atrás do título, andando devagar */
-.monograma{position:absolute;z-index:0;pointer-events:none;aspect-ratio:366/398;height:auto;fill:none;stroke:var(--bronze-claro);stroke-opacity:.2;stroke-width:1.2;
-  stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2.6s cubic-bezier(.5,0,.2,1)}
-.monograma.tracou,html:not(.js) .monograma{stroke-dashoffset:0}
-
-/* sobre */
-.sobre .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(2.5rem,7vw,7rem);align-items:center}
-.retrato{position:relative;margin:0}
-.retrato img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:40% 30%;filter:saturate(.9)}
-.retrato .janela{aspect-ratio:4/5}
-.retrato::before{content:"";position:absolute;inset:-14px 14px 14px -14px;border:1px solid var(--linha);z-index:-1}
-.retrato figcaption{position:absolute;left:-1px;bottom:-1px;background:var(--papel);padding:1rem 1.4rem 0 0;font:italic 1.6rem/1 var(--serif)}
-.retrato figcaption small{display:block;font:400 .7rem/1.4 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--tinta-2);margin-top:.5rem;font-style:normal}
-.sobre h2{margin-bottom:2rem}
-.sobre .texto p{color:var(--tinta-2);max-width:58ch}
-.numeros{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.8rem;padding-top:2rem;border-top:1px solid var(--linha)}
-.numeros strong{display:block;font:400 clamp(1.8rem,3.4vw,2.6rem)/1 var(--serif);margin-bottom:.45rem}
-.numeros span{display:block;font-size:.85rem;line-height:1.45;color:var(--tinta-2)}
-@media (max-width:820px){.sobre .wrap{grid-template-columns:1fr}.retrato{max-width:min(340px,82%);margin-left:14px}.numeros{grid-template-columns:1fr 1fr 1fr;gap:1rem}}
-
-/* portfólio */
-.filtros{display:flex;flex-wrap:wrap;gap:.5rem;margin:2.2rem 0 2.4rem}
-.filtros button{font:400 .76rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;padding:.75rem 1.1rem;border:1px solid var(--linha);background:transparent;color:var(--tinta-2);border-radius:999px;cursor:pointer;transition:all .25s ease}
-.filtros button:hover{border-color:var(--tinta);color:var(--tinta)}
-.filtros button[aria-pressed="true"]{background:var(--tinta);border-color:var(--tinta);color:var(--branco)}
-.grade{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:clamp(190px,23vw,330px);gap:clamp(8px,1.2vw,16px)}
-.grade button{position:relative;grid-column:span 2;padding:0;border:0;overflow:hidden;cursor:zoom-in;background:var(--papel-2);opacity:0;translate:0 20px;animation:sobe .8s var(--ease) forwards}
-.grade button:nth-child(10n+1){grid-column:span 4}
-.grade button:nth-child(10n+7){grid-column:span 4}
-.grade img{width:100%;height:100%;object-fit:cover;transition:scale 1.1s var(--ease)}
-.grade button:hover img,.grade button:focus-visible img{scale:1.05}
-.grade button span{position:absolute;left:0;right:0;bottom:0;padding:2.4rem 1rem .9rem;text-align:left;color:var(--branco);font:400 .72rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;
-  background:linear-gradient(transparent,rgba(15,14,12,.65));opacity:0;translate:0 8px;transition:all .4s var(--ease)}
-.grade button:hover span,.grade button:focus-visible span{opacity:1;translate:0 0}
-.mais{display:flex;justify-content:center;margin-top:2.4rem}
-.mais .btn{background:transparent;color:var(--tinta)}
-/* convite depois da galeria: quem acabou de ver os projetos já tem o botão ali */
-.convite{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.2rem 2rem;margin-top:clamp(2.6rem,5vw,3.6rem);padding:clamp(1.4rem,3vw,2rem) 0;border-block:1px solid var(--linha)}
-.convite p{margin:0;font:400 clamp(1.45rem,2.4vw,1.95rem)/1.25 var(--serif);max-width:36ch}
-.convite em{color:var(--bronze)}
-@media (max-width:700px){.grade{grid-template-columns:1fr 1fr;grid-auto-rows:44vw}.grade button,.grade button:nth-child(10n+7){grid-column:span 1}.grade button:nth-child(5n+1){grid-column:span 2}.grade button span{opacity:1;translate:0 0;padding-top:1.6rem;font-size:.62rem}}
-
-/* lightbox */
-.foto-cheia{border:0;padding:0;margin:0;width:100vw;height:100vh;height:100dvh;max-width:none;max-height:none;background:rgba(15,14,12,.96);color:var(--branco)}
-.foto-cheia::backdrop{background:transparent}
-.foto-cheia[open]{display:grid;grid-template-rows:auto 1fr auto}
-.foto-cheia header,.foto-cheia footer{display:flex;align-items:center;justify-content:space-between;padding:1rem var(--g);font:400 .74rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase}
-.foto-cheia figure{margin:0;min-height:0;display:grid;place-items:center;padding:0 clamp(0px,6vw,90px);touch-action:pan-y}
-.foto-cheia figure img{max-width:100%;max-height:100%;object-fit:contain;transition:opacity .25s ease}
-.foto-cheia button{background:transparent;border:1px solid rgba(255,255,255,.3);color:var(--branco);width:48px;height:48px;border-radius:50%;display:grid;place-items:center;cursor:pointer;transition:background .2s}
-.foto-cheia button:hover{background:rgba(255,255,255,.1)}
-.foto-cheia button svg{width:20px;height:20px}
-.foto-cheia .setas{display:flex;gap:.6rem}
-
-/* serviços */
-.servicos .cartoes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,3vw,2.5rem);margin-top:3rem}
-.cartao{background:var(--branco);border:1px solid var(--linha)}
-.cartao .img{overflow:hidden;aspect-ratio:3/2}
-.cartao img{width:100%;height:100%;object-fit:cover;transition:scale 1.2s var(--ease)}
-.cartao:hover img{scale:1.04}
-.cartao div.txt{padding:clamp(1.4rem,3vw,2.4rem)}
-.cartao h3{font-size:clamp(1.7rem,2.8vw,2.3rem);margin-bottom:.8rem}
-.cartao p{color:var(--tinta-2);margin:0}
-.modo{margin-top:clamp(2.5rem,6vw,4.5rem);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:2rem 4rem;align-items:center;padding:clamp(1.6rem,4vw,3rem);background:var(--noite);color:var(--papel)}
-.modo h3{font-size:clamp(1.8rem,3vw,2.6rem)}
-.troca{position:relative;display:inline-grid;grid-template-columns:1fr 1fr;margin-top:1.6rem;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:4px}
-.troca::before{content:"";position:absolute;top:4px;bottom:4px;left:4px;width:calc(50% - 4px);border-radius:999px;background:var(--papel);transition:translate .45s var(--ease)}
-.troca[data-modo="online"]::before{translate:100% 0}
-.troca button{position:relative;z-index:1;background:transparent;border:0;color:var(--papel);font:500 .76rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;padding:.9rem 1.5rem;cursor:pointer;border-radius:999px;transition:color .3s}
-.troca button[aria-pressed="true"]{color:var(--tinta)}
-.painel p{color:rgba(244,239,231,.78);max-width:52ch}
-.painel strong{display:block;font:italic 400 1.5rem/1.2 var(--serif);color:var(--bronze-claro);margin-bottom:.8rem}
-.painel .btn{margin-top:.6rem}
-.painel[hidden]{display:none}
-.painel.mostra{animation:sobe .6s var(--ease) both}
-@media (max-width:820px){.servicos .cartoes,.modo{grid-template-columns:1fr}}
-
-/* processo */
-.processo{position:relative;overflow:clip;background:var(--noite);color:var(--papel)}
-.processo .wrap{position:relative;z-index:1}
-.processo .monograma{right:-5%;top:6%;width:clamp(300px,40vw,580px)}
-@media (max-width:700px){.processo .monograma{right:-30%;top:2%;width:340px}}
-.processo .rotulo{color:var(--bronze-claro)}
-.processo h2 em{color:var(--bronze-claro)}
-.etapas{list-style:none;padding:0;margin:clamp(2.5rem,6vw,4.5rem) 0 0;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;counter-reset:e}
-.etapas li{position:relative;padding-top:2.2rem}
-/* a linha de cada etapa se desenha da esquerda pra direita */
-.etapas li::after{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:rgba(244,239,231,.22);transform-origin:left;scale:0 1;transition:scale .9s var(--ease) calc(var(--d,0ms) + 120ms)}
-.etapas li.is-visible::after,html:not(.js) .etapas li::after{scale:1 1}
-.etapas li::before{counter-increment:e;content:"0" counter(e);position:absolute;z-index:1;top:-1px;left:0;padding-right:.9rem;translate:0 -50%;background:var(--noite);font:italic 400 2.6rem/1 var(--serif);color:var(--bronze-claro)}
-.etapas h3{font-size:1.6rem;margin:1.2rem 0 .7rem}
-.etapas p{color:rgba(244,239,231,.72);font-size:.98rem;margin:0}
-@media (max-width:900px){.etapas{grid-template-columns:1fr 1fr;gap:3.2rem 2rem}}
-@media (max-width:560px){.etapas{grid-template-columns:1fr}}
-
-/* reconhecimento: Top of Mind */
-.premio{background:var(--noite);color:var(--papel)}
-.premio .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(3rem,6vw,6rem);align-items:center}
-.premio .fotos{position:relative;display:grid;grid-template-columns:7fr 5fr;gap:14px;align-items:end}
-.premio .fotos img{width:100%;height:auto;object-fit:cover}
-.premio .fotos .a{aspect-ratio:3/4;object-position:50% 30%}
-.premio .fotos .b{aspect-ratio:4/5;margin-bottom:14%;object-position:0% 35%}
-.carimbo{position:absolute;right:28%;top:-34px;width:118px;height:118px;color:var(--bronze-claro);background:var(--noite);border-radius:50%}
-.carimbo text{font:500 9.4px var(--sans);letter-spacing:.24em;fill:currentColor}
-.carimbo .n{font:italic 400 30px var(--serif);letter-spacing:0;fill:var(--papel)}
-.premio .rotulo{color:var(--bronze-claro)}
-.premio h2 em{color:var(--bronze-claro)}
-.premio p{color:rgba(244,239,231,.78);margin-top:1.6rem}
-.premio blockquote{margin:2.2rem 0 0;padding-left:1.4rem;border-left:1px solid var(--bronze-claro);font:italic 400 clamp(1.3rem,2vw,1.6rem)/1.4 var(--serif)}
-.premio cite{display:block;margin-top:1rem;font:500 .7rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;font-style:normal;color:var(--bronze-claro)}
-.premio .btn{margin-top:2.2rem}
-@media (max-width:820px){.premio .wrap{grid-template-columns:1fr}.carimbo{width:96px;height:96px;top:-28px}}
-
-/* projetos de clientes */
-.casos{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.2rem,2.6vw,2.2rem);margin-top:3rem}
-.caso{display:flex;flex-direction:column;text-align:left;padding:0;border:0;background:transparent;color:inherit;font:inherit;cursor:zoom-in}
-.caso .capa{position:relative;overflow:hidden;aspect-ratio:4/5;width:100%;background:var(--papel-2)}
-.caso img{width:100%;height:100%;object-fit:cover;transition:scale 1.2s var(--ease)}
-.caso:hover img,.caso:focus-visible img{scale:1.05}
-.caso .tag{position:absolute;top:1rem;left:1rem;background:rgba(244,239,231,.94);font:500 .64rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;padding:.6rem .8rem}
-.caso .tag.real{background:var(--tinta);color:var(--branco)}
-.caso .qtd{position:absolute;right:1rem;bottom:1rem;color:#fff;font:500 .66rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;background:rgba(15,14,12,.6);padding:.6rem .8rem;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
-.caso h3{font-size:clamp(1.6rem,2.4vw,2.1rem);margin:1.3rem 0 .6rem}
-.caso p{color:var(--tinta-2);margin:0;font-size:.98rem}
-@media (max-width:900px){.casos{grid-template-columns:1fr;gap:2.6rem}.caso .capa{aspect-ratio:4/3}}
-
-/* empresas atendidas */
-.empresas{background:var(--noite);color:var(--papel);overflow:clip}
-.empresas .cabeca{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:1.6rem clamp(2rem,6vw,6rem);align-items:end}
-.empresas .rotulo{color:var(--bronze-claro)}
-.empresas .rotulo b{color:rgba(244,239,231,.6)}
-.empresas h2 em{color:var(--bronze-claro)}
-.empresas .cabeca>p{color:rgba(244,239,231,.75);margin:0}
-.faixa{display:flex;overflow:hidden;margin:clamp(2.6rem,5vw,4rem) 0;padding:1.9rem 0;border-block:1px solid rgba(244,239,231,.14);-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
-.faixa ul{display:flex;flex-shrink:0;margin:0;padding:0;list-style:none;animation:faixa 40s linear infinite}
-.faixa:hover ul{animation-play-state:paused}
-.faixa li{display:flex;align-items:center;margin:0 clamp(1.8rem,3.6vw,3.4rem)}
-.faixa img{display:block;width:auto;height:calc(var(--h) * var(--k,1) * 1px);opacity:.86}
-.faixa{--k:1.15}
-@media (max-width:560px){.faixa{--k:.78}}
-@keyframes faixa{to{translate:-100% 0}}
-.vitrine{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(1.8rem,2.6vw,2.4rem) clamp(.9rem,1.8vw,1.6rem)}
-.caso.emp .capa{aspect-ratio:4/5;background:#262420}
-.caso.emp .tag{background:rgba(24,23,21,.8);color:var(--papel);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
-.caso.emp .tag.real{background:var(--papel);color:var(--tinta)}
-.caso.emp h3{font-size:clamp(1.3rem,1.9vw,1.65rem);margin:1rem 0 .35rem}
-.caso.emp p{color:rgba(244,239,231,.6);font-size:.9rem;line-height:1.45}
-.empresas .fim{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.4rem 2rem;margin-top:clamp(2.6rem,5vw,3.6rem);padding-top:1.8rem;border-top:1px solid rgba(244,239,231,.14)}
-.empresas .legenda{color:rgba(244,239,231,.55);font-size:.86rem;max-width:60ch;margin:0}
-@media (max-width:1000px){.vitrine{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:820px){.empresas .cabeca{grid-template-columns:1fr}}
-@media (max-width:560px){.caso.emp .tag{top:.6rem;left:.6rem;padding:.45rem .55rem;font-size:.56rem;letter-spacing:.12em}.caso.emp .qtd{display:none}.caso.emp h3{font-size:1.15rem;margin-top:.8rem}.caso.emp p{font-size:.8rem}}
-
-/* depoimentos: placar do Google que conta + carrossel de um cartão por vez
-   (o modelo da Health, WA e Ana Flávia). O giro pausa só na faixa dos
-   controles, nunca no carrossel inteiro (defeito achado na Realce). */
-.depo{background:var(--papel-2)}
-.depo .cabeca{text-align:center;max-width:760px;margin-inline:auto}
-.depo .cabeca .rotulo{justify-content:center}
-.placar{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:1rem 2rem;max-width:780px;margin:clamp(2.2rem,5vw,3rem) auto 2.4rem;padding:1.5rem 1.8rem;background:var(--branco);border:1px solid var(--linha)}
-.placar__nota{font:400 clamp(3.2rem,7vw,4.2rem)/1 var(--serif);font-variant-numeric:tabular-nums}
-.placar__txt{display:block;margin-top:.45rem;font-size:.95rem;line-height:1.45;color:var(--tinta-2)}
-.placar__txt b{color:var(--tinta);font-weight:500}
-.placar__fonte{display:inline-flex;align-items:center;gap:.5rem;font-size:.8rem;color:var(--tinta-2)}
-.placar__fonte svg{width:18px;height:18px}
-.estrelas-med{position:relative;display:inline-block;line-height:1;font-size:1.35rem;letter-spacing:.12em}
-.estrelas-med span{display:block;white-space:nowrap}
-.estrelas-med .vazias{color:rgba(29,27,24,.14)}
-.estrelas-med .cheias{position:absolute;left:0;top:0;overflow:hidden;color:#e3a535;width:100%}
-.js .estrelas-med .cheias{width:0;transition:width 1.5s cubic-bezier(.16,1,.3,1) .15s}
-.js .estrelas-med.contou .cheias{width:100%}
-.avals{display:grid;gap:1rem}
-.aval{position:relative;display:flex;flex-direction:column;gap:1.2rem;padding:clamp(1.8rem,4vw,3rem);background:var(--branco);border:1px solid var(--linha)}
-.aval .aspas{width:34px;height:34px;color:var(--bronze-claro)}
-.aval blockquote{margin:0;font:400 clamp(1.4rem,2.6vw,1.95rem)/1.35 var(--serif);color:var(--tinta)}
-.aval__quem{margin-top:auto;display:flex;align-items:center;gap:.85rem}
-.aval__ini{width:46px;height:46px;border-radius:50%;flex:none;display:grid;place-items:center;background:var(--papel);color:var(--bronze);border:1px solid var(--bronze-claro);font-weight:500;font-size:.86rem;letter-spacing:.04em}
-.aval__quem b{display:block;font-weight:500;font-size:.98rem}
-.aval__quem .fonte{display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:var(--tinta-2)}
-.aval__quem .fonte svg{width:14px;height:14px}
-.carrossel__janela{overflow:hidden}
-.carrossel--on .carrossel__janela{max-width:820px;margin-inline:auto}
-.carrossel--on .avals{display:flex;gap:0;transition:transform .7s cubic-bezier(.22,1,.36,1);will-change:transform}
-.carrossel--on .aval{flex:0 0 100%;min-width:100%;align-self:stretch;opacity:.15;transition:opacity .7s ease}
-.carrossel--on .aval[aria-hidden="false"]{opacity:1}
-.carrossel__controles{display:none;align-items:center;justify-content:center;gap:1rem;margin-top:1.6rem}
-.carrossel--on .carrossel__controles{display:flex}
-.seta{width:48px;height:48px;border-radius:50%;flex:none;display:grid;place-items:center;cursor:pointer;background:transparent;border:1px solid rgba(29,27,24,.3);color:var(--tinta);transition:border-color .18s,color .18s,translate .18s}
-.seta svg{width:20px;height:20px}
-.seta:hover{border-color:var(--bronze);color:var(--bronze);translate:0 -1px}
-.pontos{display:flex;align-items:center;gap:.45rem}
-.ponto{position:relative;width:22px;height:48px;padding:0;border:0;background:none;cursor:pointer;transition:width .3s cubic-bezier(.22,1,.36,1)}
-.ponto::after{content:"";position:absolute;inset:50% 0 auto 0;translate:0 -50%;height:8px;border-radius:999px;background:rgba(29,27,24,.18);transition:background .3s}
-.ponto[aria-current="true"]{width:40px}
-.ponto[aria-current="true"]::after{background:var(--bronze)}
-@media (max-width:440px){.pontos{gap:.3rem}.ponto{width:14px}.ponto[aria-current="true"]{width:28px}.carrossel__controles{gap:.6rem}}
-.depo .acoes{display:flex;justify-content:center;margin-top:2.2rem}
-
-/* instagram: a faixa da Bem Viver. Posts reais, cada um abre o próprio post.
-   A pista anda -50% (dois trilhos iguais) e para com o cursor em cima ou com o
-   foco do teclado. Começa colada na borda, sem vão na esquerda. */
-.insta{overflow:clip}
-.insta .cabeca{display:flex;flex-direction:column;align-items:center;text-align:center}
-.insta .cabeca .rotulo{justify-content:center}
-.ig{position:relative;overflow:hidden;margin-top:clamp(2.2rem,5vw,3.2rem);padding:.6rem 0 1.6rem;
-  -webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
-.ig__pista{display:flex;width:max-content;animation:igrola 105s linear infinite}
-.ig:hover .ig__pista,.ig:focus-within .ig__pista{animation-play-state:paused}
-@keyframes igrola{to{transform:translateX(-50%)}}
-.ig__trilho{display:flex;gap:1rem;margin:0;padding:0 .5rem;list-style:none}
-.ig__post{position:relative;display:block;width:clamp(190px,21vw,270px);aspect-ratio:4/5;border-radius:3px;overflow:hidden;
-  background:var(--papel-2);box-shadow:0 18px 36px -16px rgba(29,27,24,.4);transition:transform .5s var(--ease),box-shadow .5s ease}
-.ig__post img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
-.ig__post::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,14,12,0) 40%,rgba(15,14,12,.72));opacity:0;transition:opacity .4s ease}
-.ig__marca{position:absolute;top:.7rem;right:.7rem;z-index:1;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:rgba(24,23,21,.5);color:#fff}
-.ig__marca svg{width:16px;height:16px}
-.ig__ver{position:absolute;left:0;right:0;bottom:1.1rem;z-index:1;display:flex;justify-content:center;align-items:center;gap:.45rem;
-  font:500 .72rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:#fff;opacity:0;transform:translateY(8px);transition:opacity .4s ease,transform .4s var(--ease)}
-.ig__ver svg{width:16px;height:16px}
-.ig__post:hover,.ig__post:focus-visible{transform:translateY(-6px);box-shadow:0 26px 44px -16px rgba(29,27,24,.5)}
-.ig__post:hover img,.ig__post:focus-visible img{transform:scale(1.06)}
-.ig__post:hover::after,.ig__post:focus-visible::after{opacity:1}
-.ig__post:hover .ig__ver,.ig__post:focus-visible .ig__ver{opacity:1;transform:none}
-.insta .acoes{display:flex;justify-content:center;margin-top:.6rem}
-.perfil{display:flex;align-items:center;gap:1.1rem;text-decoration:none;margin-top:2rem;text-align:left}
-.perfil img{width:76px;height:76px;border-radius:50%;object-fit:cover;object-position:50% 18%;padding:3px;background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7)}
-.perfil b{display:block;font:400 1.55rem/1.1 var(--serif)}
-.perfil span{font-size:.86rem;color:var(--tinta-2)}
-
-/* dúvidas: só o que dá pra responder com prova (acompanhamento de obra fica de fora até ela confirmar).
-   <details> funciona sem JS; name="duvidas" deixa uma aberta por vez; a abertura suave é só onde o navegador sabe animar altura */
-.duvidas{background:var(--papel-2)}
-.duvidas .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:2rem clamp(2.5rem,6vw,6rem);align-items:start}
-.duvidas .cabeca{position:sticky;top:110px}
-.perguntas details{border-bottom:1px solid var(--linha)}
-.perguntas details:first-child{border-top:1px solid var(--linha)}
-.perguntas summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1.5rem;padding:1.5rem 0;font:400 clamp(1.3rem,2.1vw,1.65rem)/1.25 var(--serif);transition:color .25s}
-.perguntas summary::-webkit-details-marker{display:none}
-.perguntas summary::after{content:"";flex:none;width:36px;height:36px;border:1px solid var(--linha);border-radius:50%;
-  background:linear-gradient(currentColor,currentColor) center/12px 1px no-repeat,linear-gradient(currentColor,currentColor) center/1px 12px no-repeat;transition:rotate .4s var(--ease),border-color .3s}
-.perguntas summary:hover,.perguntas details[open] summary{color:var(--bronze)}
-.perguntas details[open] summary::after{rotate:45deg;border-color:var(--bronze-claro)}
-.resp{padding:0 0 1.7rem}
-.resp p{margin:0;color:var(--tinta-2);max-width:60ch}
-.link-zap{display:inline-flex;align-items:center;gap:.55rem;margin-top:1.1rem;font:500 .76rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--tinta);padding-bottom:.35rem;border-bottom:1px solid var(--bronze-claro);transition:color .2s}
-.link-zap svg{width:17px;height:17px;color:#1f8f55}
-.link-zap:hover{color:var(--bronze)}
-@supports (interpolate-size:allow-keywords){
-  .perguntas{interpolate-size:allow-keywords}
-  .perguntas details::details-content{block-size:0;overflow:clip;transition:block-size .5s var(--ease),content-visibility .5s allow-discrete}
-  .perguntas details[open]::details-content{block-size:auto}
-}
-@media (max-width:820px){.duvidas .wrap{grid-template-columns:1fr}.duvidas .cabeca{position:static}}
-
-/* contato */
-.contato{position:relative;color:var(--papel);background:var(--noite);overflow:hidden}
-.contato .fundo{position:absolute;left:0;top:-11%;width:100%;height:122%;object-fit:cover;opacity:.32}
-.contato::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(24,23,21,.96) 30%,rgba(24,23,21,.55))}
-.contato .wrap{position:relative;display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:3rem 5rem;align-items:center}
-.contato .rotulo{color:var(--bronze-claro)}
-.contato h2{font-size:clamp(2.4rem,6vw,4.6rem)}
-.contato h2 em{color:var(--bronze-claro)}
-.contato p.chamada{margin:1.5rem 0 2.2rem;color:rgba(244,239,231,.8);max-width:46ch}
-.dados{list-style:none;margin:0;padding:0;display:grid;gap:1.4rem}
-.dados li{display:grid;grid-template-columns:22px 1fr;gap:1rem;padding-bottom:1.4rem;border-bottom:1px solid rgba(244,239,231,.15)}
-.dados svg{width:22px;height:22px;stroke:var(--bronze-claro);fill:none;stroke-width:1.5;margin-top:.2rem}
-.dados small{display:block;font:500 .68rem/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:rgba(244,239,231,.6);margin-bottom:.45rem}
-.dados a{text-decoration:none;border-bottom:1px solid rgba(244,239,231,.3)}
-.dados a:hover{border-color:var(--bronze-claro)}
-@media (max-width:820px){.contato .wrap{grid-template-columns:1fr}.contato::before{background:rgba(24,23,21,.88)}}
-
-/* rodapé */
-.rodape{background:#100f0e;color:rgba(244,239,231,.7);padding:2.6rem 0 2rem;font-size:.82rem}
-.rodape .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1.2rem}
-.rodape .marca{color:var(--papel)}
-.assinatura{margin:1.6rem 0 0;text-align:center;font-size:.7rem;letter-spacing:.04em;opacity:.75}
-.assinatura a{color:inherit;font-weight:500;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px;transition:opacity .2s ease}
-.assinatura a:hover{opacity:.7}
-
-/* WhatsApp flutuante (aparece depois do hero) */
-.zap{position:fixed;right:clamp(14px,2.5vw,28px);bottom:clamp(14px,2.5vw,28px);z-index:40;width:58px;height:58px;border-radius:50%;background:#1f8f55;color:#fff;display:grid;place-items:center;
-  box-shadow:0 12px 30px -8px rgba(0,0,0,.45);opacity:0;scale:.6;pointer-events:none;transition:opacity .35s ease,scale .35s var(--ease)}
-.zap.ativo{opacity:1;scale:1;pointer-events:auto}
-.zap svg{width:28px;height:28px}
-@media (max-width:700px){.rodape{padding-bottom:6rem}}
-@media (max-width:420px){.btn{letter-spacing:.1em;padding:1rem 1.25rem;font-size:.76rem}}
-
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
-  .revela{opacity:1;translate:none}
-  .hero img{scale:1.02;translate:none}.hero .wrap{opacity:1;translate:none}
-  .faixa{-webkit-mask-image:none;mask-image:none}.faixa ul{animation:none;flex-wrap:wrap;justify-content:center;flex-shrink:1;row-gap:1rem}.faixa ul+ul{display:none}
-  .ig{overflow-x:auto;-webkit-mask-image:none;mask-image:none}
-  .ig__pista{animation:none}
-  .ig__trilho+.ig__trilho{display:none}
-  .js .palco .revela h2 .pal>span{translate:none}
-  .js .persiana{-webkit-mask:none;mask:none}
-  .monograma{stroke-dashoffset:0}
-  .etapas li::after{scale:1 1}
-  .js .revela .rotulo::before{width:2.4rem}
-}
-</style>
+<link rel="stylesheet" href="assets/site.css?v=3">
 </head>
 <body>
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
@@ -555,7 +91,7 @@ html:not(.js) .revela{opacity:1;translate:none}
       <span>Denise Mota<small>arquitetura e interiores</small></span>
     </a>
     <nav class="nav" aria-label="Seções">
-      <a href="#projetos">Projetos</a>
+      <a href="portfolio.html">Portfólio</a>
       <a href="#empresas">Empresas</a>
       <a href="#servicos">Serviços</a>
       <a href="#processo">Processo</a>
@@ -575,7 +111,7 @@ html:not(.js) .revela{opacity:1;translate:none}
     <p class="sub entra">Arquitetura e interiores para casas e empresas, com atendimento presencial em Itabira e região e online para todo o Brasil.</p>
     <div class="acoes entra">
       <a class="btn btn--claro" href="https://wa.me/5531971633335?text=Ol%C3%A1%2C%20Denise!%20Vi%20seu%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Conversar sobre meu projeto</a>
-      <a class="btn btn--vazado" href="#projetos">Ver projetos</a>
+      <a class="btn btn--vazado" href="portfolio.html">Ver projetos</a>
     </div>
     <div class="selos entra">
       <a class="nota" href="https://maps.google.com/?cid=3645249256347178595" target="_blank" rel="noopener"><span class="estrelas" aria-hidden="true">★★★★★</span> 5,0 no Google, em 27 avaliações</a>
@@ -584,7 +120,8 @@ html:not(.js) .revela{opacity:1;translate:none}
   </div>
 </section>
 
-<div class="palco" id="conteudo">
+<div class="palco">
+<main id="conteudo">
 
 <section class="sobre" id="sobre">
   <div class="wrap">
@@ -593,7 +130,7 @@ html:not(.js) .revela{opacity:1;translate:none}
       <figcaption>Denise Mota<small>Arquiteta e urbanista</small></figcaption>
     </figure>
     <div class="texto revela">
-      <p class="rotulo"><b>01</b> A arquiteta</p>
+      <p class="rotulo">A arquiteta</p>
       <h2>Um projeto com a sua essência, <em>não com um padrão.</em></h2>
       <p>Denise Mota é arquiteta e urbanista, formada pela Faculdade Santo Agostinho. Do escritório em Itabira, atende presencialmente na região e online em todo o território nacional.</p>
       <p>Cada projeto começa por uma escuta atenta: entender o que é importante para a família, como ela usa a casa e o que quer sentir dentro dela. Dessa conversa nasce uma arquitetura sem fórmula pronta, que une estética, função e inovação em cada detalhe.</p>
@@ -620,7 +157,6 @@ html:not(.js) .revela{opacity:1;translate:none}
       </svg>
     </div>
     <div class="revela">
-      <p class="rotulo"><b style="color:rgba(244,239,231,.6)">02</b> Reconhecimento</p>
       <h2>Top of Mind 2026 <em>em Itabira.</em></h2>
       <p>Na pesquisa popular espontânea do Top of Mind 2026, Denise Mota Arquitetura foi o nome mais lembrado na categoria Escritórios de Arquitetura, depois de dois anos seguidos entre os finalistas.</p>
       <blockquote>Esse prêmio carrega o meu nome, mas ele foi construído por muitas mãos e pela confiança de muitas pessoas.<cite>Denise Mota</cite></blockquote>
@@ -629,37 +165,11 @@ html:not(.js) .revela{opacity:1;translate:none}
   </div>
 </section>
 
-<section class="clientes" id="clientes">
-  <div class="wrap">
-    <div class="revela">
-      <p class="rotulo"><b>03</b> Projetos de clientes</p>
-      <h2>Cada casa conta <em>a história de quem mora nela.</em></h2>
-    </div>
-    <div class="casos">
-      <button class="caso revela" type="button" data-caso="helena">
-        <span class="capa"><img src="assets/img/helena-01-800.webp" alt="Quarto infantil com nichos iluminados e armário sob medida" loading="lazy"><span class="tag real">Obra entregue</span><span class="qtd">6 fotos</span></span>
-        <h3>O quarto da Helena</h3>
-        <p>Um quarto cheio de detalhes para uma mini cliente cheia de personalidade: nichos iluminados, marcenaria sob medida e cantinhos pensados para guardar os brinquedos.</p>
-      </button>
-      <button class="caso revela" type="button" data-caso="casa">
-        <span class="capa"><img src="assets/img/casa-01-800.webp" alt="Casa de campo com telhado de cerâmica, varandas e jardim" loading="lazy" style="object-position:60% 50%"><span class="tag">Projeto residencial</span><span class="qtd">7 imagens</span></span>
-        <h3>Uma casa feita nas conversas</h3>
-        <p>Cada pessoa da família trouxe desejos, histórias e dúvidas. A casa nasceu do jeito como eles se encontram, do que valorizam e do que sonham viver daqui para frente.</p>
-      </button>
-      <button class="caso revela" type="button" data-caso="ampliacao">
-        <span class="capa"><img src="assets/img/ampliacao-02-800.webp" alt="Fachada contemporânea com marquise curva e jardim tropical na entrada" loading="lazy"><span class="tag">Ampliação</span><span class="qtd">4 imagens</span></span>
-        <h3>Ampliar sem apagar a identidade</h3>
-        <p>O desafio foi ampliar uma construção existente respeitando a sua linguagem. A proposta nova nasce do que já estava construído e conversa com ele.</p>
-      </button>
-    </div>
-  </div>
-</section>
-
 <section class="empresas" id="empresas">
   <div class="wrap">
     <div class="cabeca revela">
       <div>
-        <p class="rotulo"><b>04</b> Empresas atendidas</p>
+        <p class="rotulo">Empresas atendidas</p>
         <h2>Um projeto comercial não é só estética. <em>É estratégia.</em></h2>
       </div>
       <p>Cada escolha no espaço de uma empresa comunica algo. Denise projeta lojas, clínicas, escritórios e fachadas pensando na experiência de quem chega e em como a marca aparece no ambiente: o letreiro, a luz, os materiais e o caminho da calçada ao balcão.</p>
@@ -716,26 +226,20 @@ html:not(.js) .revela{opacity:1;translate:none}
 <section class="projetos" id="projetos">
   <div class="wrap">
     <div class="revela">
-      <p class="rotulo"><b>05</b> Portfólio</p>
+      <p class="rotulo">Portfólio</p>
       <h2>Casas, ambientes <em>e detalhes.</em></h2>
-      <p style="color:var(--tinta-2);max-width:56ch;margin-top:1.4rem">Imagens em 3D de projetos residenciais do escritório. Toque em qualquer imagem para ver em tela cheia.</p>
     </div>
-    <div class="filtros" role="group" aria-label="Filtrar projetos" id="filtros">
-      <button type="button" data-cat="todos" aria-pressed="true">Destaques</button>
-      <button type="button" data-cat="fachada" aria-pressed="false">Fachadas</button>
-      <button type="button" data-cat="estar" aria-pressed="false">Estar e jantar</button>
-      <button type="button" data-cat="cozinha" aria-pressed="false">Cozinhas</button>
-      <button type="button" data-cat="lazer" aria-pressed="false">Lazer e gourmet</button>
-      <button type="button" data-cat="quarto" aria-pressed="false">Quartos</button>
-      <button type="button" data-cat="banho" aria-pressed="false">Banheiros</button>
-    </div>
-    <div class="grade" id="grade" aria-live="polite"></div>
-    <div class="mais"><button class="btn" type="button" id="ver-todos">Ver todos os projetos</button></div>
-    <div class="convite revela">
-      <p>Gostou de algum desses projetos? <em>Conte o que você imagina para o seu.</em></p>
-      <a class="btn" href="https://wa.me/5531971633335?text=Ol%C3%A1%2C%20Denise!%20Vi%20os%20projetos%20no%20seu%20site%20e%20gostaria%20de%20conversar%20sobre%20o%20meu." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Conversar sobre meu projeto</a>
-    </div>
-    <noscript><p>Para ver o portfólio completo, <a href="https://wa.me/5531971633335">fale com a Denise pelo WhatsApp</a>.</p></noscript>
+    <a class="mosaico-portfolio" href="portfolio.html">
+      <span class="mosaico-portfolio__foto"><img src="assets/img/fachada-01-600.webp" srcset="assets/img/fachada-01-500.webp 500w, assets/img/fachada-01-600.webp 600w, assets/img/fachada-01-800.webp 800w" sizes="(max-width:700px) 47vw, 25vw" alt="Fachada residencial projetada por Denise Mota" width="600" height="600" loading="lazy" decoding="async"></span>
+      <span class="mosaico-portfolio__foto"><img src="assets/img/estar-05-600.webp" srcset="assets/img/estar-05-500.webp 500w, assets/img/estar-05-600.webp 600w, assets/img/estar-05-800.webp 800w" sizes="(max-width:700px) 47vw, 25vw" alt="Sala de estar e jantar projetada por Denise Mota" width="600" height="600" loading="lazy" decoding="async"></span>
+      <span class="mosaico-portfolio__foto"><img src="assets/img/cozinha-01-600.webp" srcset="assets/img/cozinha-01-500.webp 500w, assets/img/cozinha-01-600.webp 600w, assets/img/cozinha-01-800.webp 800w" sizes="(max-width:700px) 47vw, 25vw" alt="Cozinha planejada projetada por Denise Mota" width="600" height="600" loading="lazy" decoding="async"></span>
+      <span class="mosaico-portfolio__foto"><img src="assets/img/lazer-02-600.webp" srcset="assets/img/lazer-02-500.webp 500w, assets/img/lazer-02-600.webp 600w, assets/img/lazer-02-800.webp 800w" sizes="(max-width:700px) 47vw, 25vw" alt="Área de lazer e espaço gourmet projetada por Denise Mota" width="600" height="600" loading="lazy" decoding="async"></span>
+      <span class="mosaico-portfolio__chamada">
+        <span class="mosaico-portfolio__conta">3 projetos de clientes · 44 imagens em 3D</span>
+        <span class="mosaico-portfolio__texto">Da fachada ao quarto das crianças, ambiente por ambiente.</span>
+        <span class="btn btn--claro">Ver o portfólio<svg aria-hidden="true"><use href="#i-dir"/></svg></span>
+      </span>
+    </a>
   </div>
 </section>
 
@@ -748,22 +252,32 @@ html:not(.js) .revela{opacity:1;translate:none}
 <section class="servicos" id="servicos" style="padding-top:0">
   <div class="wrap">
     <div class="revela">
-      <p class="rotulo"><b>06</b> Serviços</p>
+      <p class="rotulo">Serviços</p>
       <h2>Da fachada <em>à última prateleira.</em></h2>
     </div>
-    <div class="cartoes">
-      <article class="cartao revela">
-        <div class="img"><img src="assets/img/fachada-01-800.webp" srcset="assets/img/fachada-01-800.webp 800w, assets/img/fachada-01-1600.webp 1600w" sizes="(max-width:820px) 100vw, 420px" alt="Fachada residencial em dois pavimentos com pedra e iluminação" loading="lazy"></div>
-        <div class="txt"><h3>Arquitetura residencial</h3><p>Casa nova ou reforma. O desenho dos espaços, da fachada e da relação da casa com o terreno, pensado para a rotina de quem vai morar ali.</p></div>
-      </article>
-      <article class="cartao revela">
-        <div class="img"><img src="assets/img/estar-05-800.webp" srcset="assets/img/estar-05-800.webp 800w, assets/img/estar-05-1600.webp 1600w" sizes="(max-width:820px) 100vw, 420px" alt="Sala de estar e jantar integradas, com poltronas azuis e painel ripado" loading="lazy"></div>
-        <div class="txt"><h3>Interiores residenciais</h3><p>Ambientes completos: marcenaria, iluminação, revestimentos, cores e mobiliário, para cada cômodo ter a cara da família e funcionar no dia a dia.</p></div>
-      </article>
-      <article class="cartao revela">
-        <div class="img"><img src="assets/img/emp-elev-02-800.webp" srcset="assets/img/emp-elev-02-800.webp 800w, assets/img/emp-elev-02-1600.webp 1600w" sizes="(max-width:820px) 100vw, 420px" alt="Imagem 3D de consultório odontológico com a marca da clínica na parede" loading="lazy"></div>
-        <div class="txt"><h3>Projetos comerciais</h3><p>Lojas, clínicas, escritórios e fachadas. Layout, iluminação, materiais e a marca aplicada no ambiente, pensados para a experiência do cliente e para a rotina de quem trabalha ali.</p></div>
-      </article>
+    <div class="servicos-lista">
+      <ul class="servicos-itens">
+        <li class="servico revela is-ativo" data-i="0">
+          <div class="servico__img"><img src="assets/img/fachada-01-800.webp" alt="" loading="lazy" decoding="async"></div>
+          <h3>Arquitetura residencial</h3>
+          <p>Casa nova ou reforma. O desenho dos espaços, da fachada e da relação da casa com o terreno, pensado para a rotina de quem vai morar ali.</p>
+        </li>
+        <li class="servico revela" data-i="1">
+          <div class="servico__img"><img src="assets/img/estar-05-800.webp" alt="" loading="lazy" decoding="async"></div>
+          <h3>Interiores residenciais</h3>
+          <p>Ambientes completos: marcenaria, iluminação, revestimentos, cores e mobiliário, para cada cômodo ter a cara da família e funcionar no dia a dia.</p>
+        </li>
+        <li class="servico revela" data-i="2">
+          <div class="servico__img"><img src="assets/img/emp-elev-02-800.webp" alt="" loading="lazy" decoding="async"></div>
+          <h3>Projetos comerciais</h3>
+          <p>Lojas, clínicas, escritórios e fachadas. Layout, iluminação, materiais e a marca aplicada no ambiente, pensados para a experiência do cliente e para a rotina de quem trabalha ali.</p>
+        </li>
+      </ul>
+      <div class="servicos-foto revela">
+        <img class="is-ativo" src="assets/img/fachada-01-800.webp" srcset="assets/img/fachada-01-800.webp 800w, assets/img/fachada-01-1600.webp 1600w" sizes="(max-width:820px) 1px, 36vw" alt="Fachada residencial em dois pavimentos com pedra e iluminação" loading="lazy" decoding="async">
+        <img class="" src="assets/img/estar-05-800.webp" srcset="assets/img/estar-05-800.webp 800w, assets/img/estar-05-1600.webp 1600w" sizes="(max-width:820px) 1px, 36vw" alt="Sala de estar e jantar integradas, com poltronas azuis e painel ripado" loading="lazy" decoding="async">
+        <img class="" src="assets/img/emp-elev-02-800.webp" srcset="assets/img/emp-elev-02-800.webp 800w, assets/img/emp-elev-02-1600.webp 1600w" sizes="(max-width:820px) 1px, 36vw" alt="Imagem 3D de consultório odontológico com a marca da clínica na parede" loading="lazy" decoding="async">
+      </div>
     </div>
     <div class="modo revela">
       <div>
@@ -790,10 +304,8 @@ html:not(.js) .revela{opacity:1;translate:none}
 </section>
 
 <section class="processo" id="processo">
-  <svg class="monograma" data-px=".14" data-traca viewBox="0 0 366 398" aria-hidden="true"><use href="#marca" width="366" height="398"/></svg>
   <div class="wrap">
     <div class="revela">
-      <p class="rotulo"><b style="color:rgba(244,239,231,.6)">07</b> Processo</p>
       <h2>Como o projeto <em>acontece.</em></h2>
     </div>
     <ol class="etapas">
@@ -808,7 +320,6 @@ html:not(.js) .revela{opacity:1;translate:none}
 <section class="depo" id="depoimentos">
   <div class="wrap">
     <div class="cabeca revela">
-      <p class="rotulo"><b>08</b> Depoimentos</p>
       <h2>Quem já confiou <em>a casa à Denise.</em></h2>
     </div>
 
@@ -881,7 +392,6 @@ html:not(.js) .revela{opacity:1;translate:none}
 <section class="insta" id="instagram">
   <div class="wrap">
     <div class="cabeca revela">
-      <p class="rotulo"><b>09</b> Instagram</p>
       <h2>O dia a dia <em>do escritório.</em></h2>
       <a class="perfil" href="https://www.instagram.com/arquitetadenisemota/" target="_blank" rel="noopener">
         <img src="assets/img/ig-DZ1T6lujL-V.webp" alt="" width="76" height="76" loading="lazy">
@@ -931,7 +441,6 @@ html:not(.js) .revela{opacity:1;translate:none}
 <section class="duvidas" id="duvidas">
   <div class="wrap">
     <div class="cabeca revela">
-      <p class="rotulo"><b>10</b> Dúvidas</p>
       <h2>O que costumam perguntar <em>antes de começar.</em></h2>
     </div>
     <div class="perguntas">
@@ -960,7 +469,6 @@ html:not(.js) .revela{opacity:1;translate:none}
   <img class="fundo" data-janela=".1" src="assets/img/lazer-05-1600.webp" srcset="assets/img/lazer-05-800.webp 800w, assets/img/lazer-05-1600.webp 1280w" sizes="100vw" alt="" loading="lazy">
   <div class="wrap">
     <div class="revela">
-      <p class="rotulo"><b style="color:rgba(244,239,231,.6)">11</b> Contato</p>
       <h2>Vamos conversar <em>sobre o seu projeto?</em></h2>
       <p class="chamada">Conte em poucas palavras o que você tem em mente: construir, reformar ou repensar os ambientes. A primeira conversa é pelo WhatsApp.</p>
       <a class="btn btn--claro" href="https://wa.me/5531971633335?text=Ol%C3%A1%2C%20Denise!%20Vi%20seu%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-zap"/></svg>Chamar no WhatsApp</a>
@@ -974,6 +482,7 @@ html:not(.js) .revela{opacity:1;translate:none}
     </ul>
   </div>
 </section>
+</main>
 
 <footer class="rodape">
   <div class="wrap">
@@ -985,8 +494,9 @@ html:not(.js) .revela{opacity:1;translate:none}
 
 </div>
 
-<a class="zap" id="zap" href="https://wa.me/5531971633335?text=Ol%C3%A1%2C%20Denise!%20Vi%20seu%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener" aria-label="Conversar com a Denise no WhatsApp"><svg aria-hidden="true"><use href="#i-zap"/></svg></a>
+<aside aria-label="Atalho do WhatsApp"><a class="zap" id="zap" href="https://wa.me/5531971633335?text=Ol%C3%A1%2C%20Denise!%20Vi%20seu%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener" aria-label="Conversar com a Denise no WhatsApp"><svg aria-hidden="true"><use href="#i-zap"/></svg></a></aside>
 
+<script src="assets/tela-cheia.js?v=1"></script>
 <script>
 (() => {
   const reduz = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1150,59 +660,9 @@ html:not(.js) .revela{opacity:1;translate:none}
   const ioTraca = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('tracou'); ioTraca.unobserve(e.target); } }), { threshold: .25 });
   document.querySelectorAll('[data-traca]').forEach((el) => ioTraca.observe(el));
 
-  // portfólio
-  const nomes = { fachada: 'Fachada', estar: 'Estar e jantar', cozinha: 'Cozinha', lazer: 'Lazer e gourmet', quarto: 'Quarto', banho: 'Banheiro' };
-  const alts = { fachada: 'Fachada residencial', estar: 'Sala de estar e jantar', cozinha: 'Cozinha planejada', lazer: 'Área de lazer e espaço gourmet', quarto: 'Quarto', banho: 'Banheiro' };
-  const qtd = { fachada: 9, estar: 11, cozinha: 6, lazer: 10, quarto: 6, banho: 2 };
-  const arq = { banho: 'banho' };
-  const todas = [];
-  for (const cat in qtd) for (let i = 1; i <= qtd[cat]; i++) todas.push({ cat, f: (arq[cat] || cat) + '-' + String(i).padStart(2, '0'), nome: nomes[cat], alt: alts[cat] + ' projetada por Denise Mota' });
-  const destaques = ['fachada-01', 'estar-05', 'cozinha-01', 'lazer-02', 'quarto-01', 'fachada-06', 'estar-02', 'lazer-05', 'cozinha-04', 'fachada-03', 'quarto-04', 'estar-10']
-    .map(f => todas.find(x => x.f === f));
-  const grade = $('#grade'), verTodos = $('#ver-todos');
-  let lista = destaques, listaGrade = destaques;
-  // a foto da grade pede o tamanho que a coluna ocupa: a estreita do celular baixa a de 500 ou
-  // 600 px, e nao a de 800 px que antes ela pagava inteira. As colunas largas seguem com a de 800 px.
-  const sizesDaFoto = (i) => {
-    const largaNoCelular = (i + 1) % 5 === 1;                      // .grade button:nth-child(5n+1)
-    const largaNoDesktop = (i + 1) % 10 === 1 || (i + 1) % 10 === 7;  // 10n+1 e 10n+7
-    return `${largaNoCelular ? '(max-width:700px) 89vw' : '(max-width:700px) 43vw'}, ${largaNoDesktop ? '58vw' : '27vw'}`;
-  };
-  const monta = (itens) => {
-    listaGrade = itens;
-    grade.innerHTML = itens.map((it, i) => `<button type="button" data-i="${i}" style="animation-delay:${Math.min(i, 11) * 40}ms" aria-label="Ampliar: ${it.nome}"><img src="assets/img/${it.f}-500.webp" srcset="assets/img/${it.f}-500.webp 500w, assets/img/${it.f}-600.webp 600w, assets/img/${it.f}-800.webp 800w" sizes="${sizesDaFoto(i)}" alt="${it.alt}" loading="lazy" decoding="async"><span>${it.nome}</span></button>`).join('');
-  };
-  const filtros = document.querySelectorAll('#filtros button');
-  const escolhe = (cat) => {
-    filtros.forEach(b => b.setAttribute('aria-pressed', b.dataset.cat === cat));
-    monta(cat === 'todos' ? destaques : todas.filter(x => x.cat === cat));
-    verTodos.parentElement.hidden = cat !== 'todos';
-  };
-  filtros.forEach(b => b.addEventListener('click', () => escolhe(b.dataset.cat)));
-  verTodos.addEventListener('click', () => { filtros.forEach(b => b.setAttribute('aria-pressed', 'false')); monta(todas); verTodos.parentElement.hidden = true; });
-  monta(destaques);
-
-  // tela cheia
-  const dlg = $('#foto-cheia'), img = $('#fc-img');
-  let atual = 0;
-  const mostra = (i) => {
-    atual = (i + lista.length) % lista.length;
-    const it = lista[atual];
-    img.style.opacity = 0;
-    const nova = new Image();
-    nova.onload = () => { img.src = nova.src; img.alt = it.alt; img.style.opacity = 1; };
-    nova.src = `assets/img/${it.f}-1600.webp`;
-    $('#fc-cat').textContent = it.nome;
-    $('#fc-n').textContent = String(atual + 1).padStart(2, '0') + ' / ' + String(lista.length).padStart(2, '0');
-  };
-  const abre = (itens, i) => { lista = itens; $('#foto-cheia .setas').style.visibility = itens.length > 1 ? '' : 'hidden'; mostra(i); dlg.showModal(); };
-  grade.addEventListener('click', (e) => { const b = e.target.closest('button'); if (b) abre(listaGrade, +b.dataset.i); });
 
   // projetos de clientes: cada um abre a sua sequência na tela cheia
   const casos = {
-    helena: { n: 6, nome: 'O quarto da Helena · obra entregue', alt: 'Foto real do quarto da Helena, projeto de Denise Mota' },
-    casa: { n: 7, nome: 'Uma casa feita nas conversas', alt: 'Imagem 3D da casa projetada por Denise Mota' },
-    ampliacao: { n: 4, nome: 'Ampliação', alt: 'Imagem 3D da ampliação projetada por Denise Mota' },
     // empresas atendidas
     'emp-pricyla': { n: 3, nome: 'Pricyla Tomaz Estética Avançada · foto da obra', alt: 'Foto da clínica Pricyla Tomaz Estética Avançada, projeto de Denise Mota' },
     'emp-benelli': { n: 1, nome: 'Técnica Benelli · imagem em 3D', alt: 'Imagem 3D da nova sede da Técnica Benelli, projeto de Denise Mota' },
@@ -1215,7 +675,7 @@ html:not(.js) .revela{opacity:1;translate:none}
   };
   document.querySelectorAll('[data-caso]').forEach(b => b.addEventListener('click', () => {
     const c = casos[b.dataset.caso];
-    abre(Array.from({ length: c.n }, (_, i) => ({ f: b.dataset.caso + '-' + String(i + 1).padStart(2, '0'), nome: c.nomes ? c.nomes[i] : c.nome, alt: c.alt })), 0);
+    abreTelaCheia(Array.from({ length: c.n }, (_, i) => ({ f: b.dataset.caso + '-' + String(i + 1).padStart(2, '0'), nome: c.nomes ? c.nomes[i] : c.nome, alt: c.alt })), 0);
   }));
 
   // depoimentos: o carrossel da Health. Gira a cada 5,5 s; pausa só na faixa dos
@@ -1257,15 +717,13 @@ html:not(.js) .revela{opacity:1;translate:none}
     ir(0); girar();
   }
 
-  $('#fc-fechar').addEventListener('click', () => dlg.close());
-  $('#fc-ant').addEventListener('click', () => mostra(atual - 1));
-  $('#fc-prox').addEventListener('click', () => mostra(atual + 1));
-  dlg.addEventListener('keydown', (e) => { if (e.key === 'ArrowLeft') mostra(atual - 1); if (e.key === 'ArrowRight') mostra(atual + 1); });
-  dlg.addEventListener('click', (e) => { if (e.target === dlg || e.target.id === 'fc-fig') dlg.close(); });
-  let x0 = null;
-  const fig = $('#fc-fig');
-  fig.addEventListener('pointerdown', (e) => { x0 = e.clientX; });
-  fig.addEventListener('pointerup', (e) => { if (x0 === null) return; const dx = e.clientX - x0; x0 = null; if (Math.abs(dx) > 50) { mostra(atual + (dx < 0 ? 1 : -1)); } });
+
+  // serviços: a imagem acompanha o serviço sob o mouse
+  const servicos = document.querySelectorAll('.servico'), fotosServ = document.querySelectorAll('.servicos-foto img');
+  servicos.forEach((li, i) => li.addEventListener('pointerenter', () => {
+    servicos.forEach(x => x.classList.toggle('is-ativo', x === li));
+    fotosServ.forEach((f, j) => f.classList.toggle('is-ativo', j === i));
+  }));
 
   // presencial ou online
   const troca = $('#troca');
