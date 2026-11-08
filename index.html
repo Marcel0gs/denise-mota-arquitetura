@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>
-/* Síncrono de propósito: a classe js e a decisão da abertura existem antes da
-   primeira pintura. A abertura roda uma vez por sessão e nunca com "reduzir
-   movimento". Se o script do fim não rodar, a página se libera sozinha em 6,5 s. */
+/* Síncrono de propósito: a classe js existe antes da primeira pintura. Esta página não tem
+   a abertura (08/11/2026): a casa acendendo é o impacto inicial. A foto acesa só aparece
+   depois que a apagada carregou (html.luz-ok), pra rede lenta não mostrar acesa, apagada
+   e acesa de novo; se o script do fim não rodar, ela se libera sozinha em 4 s. */
 (function (d) {
   d.classList.add('js');
-  try { if (!location.hash && !matchMedia('(prefers-reduced-motion: reduce)').matches && !sessionStorage.getItem('intro-denise')) d.classList.add('com-intro'); } catch (e) {}
-  setTimeout(function () { d.classList.add('intro-saindo', 'intro-fim'); }, 6500);
+  setTimeout(function () { d.classList.add('luz-ok'); }, 4000);
 })(document.documentElement);
 </script>
 <title>Denise Mota Arquitetura | Arquitetura e interiores em Itabira, MG</title>
@@ -30,6 +30,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/img/hero-apagada-1200.webp" imagesrcset="assets/img/hero-apagada-1200.webp 1200w, assets/img/hero-apagada-2000.webp 2000w" imagesizes="100vw" fetchpriority="high">
 <link rel="preload" as="image" href="assets/img/hero-1200.webp" imagesrcset="assets/img/hero-1200.webp 1200w, assets/img/hero-2000.webp 2000w" imagesizes="100vw" fetchpriority="high">
 <!-- as duas fotos do premio ja entram na fila desde o começo: chegar na secao e encontrar
      a foto pronta, e nao um retangulo vazio esperando o download. prioridade baixa, para nao
@@ -47,6 +48,39 @@
 {"@type":"Question","name":"Como peço um orçamento?","acceptedAnswer":{"@type":"Answer","text":"Pelo WhatsApp (31) 97163-3335. Conte o que você quer fazer, a cidade e o tamanho aproximado do espaço. O valor depende do tipo e do tamanho de cada projeto, por isso a proposta vem depois dessa primeira conversa."}}]}
 </script>
 <link rel="stylesheet" href="assets/site.css?v=8">
+<style>
+/* Interruptor de luz no topo (08/11/2026). A fachada abre apagada e acende
+   sozinha; o botão troca as duas versões do render. As duas imagens pegam as mesmas regras
+   do .hero img (escala, parallax e entrada), então ficam sempre sobrepostas. A opacidade
+   vai no <picture>, que nenhuma animação toca. Sem JS fica a acesa, o site de sempre. */
+.hero .luz-off{opacity:0;transition:opacity 1.1s cubic-bezier(.4,0,.2,1)}
+.js .hero:not(.acesa) .luz-off{opacity:1}
+/* brilho quente atrás do título: só opacidade, a letra não é redesenhada a cada quadro */
+.hero h1{position:relative;transition:color 1.4s ease .2s}
+.hero h1::before{content:"";position:absolute;inset:-30% -14% -26% -20%;z-index:-1;pointer-events:none;
+  background:radial-gradient(closest-side,rgba(226,160,92,.26),rgba(226,160,92,.1) 55%,transparent);
+  opacity:0;transition:opacity 1.6s ease .2s}
+.hero.acesa h1{color:#fff3e4}
+.hero.acesa h1::before{opacity:1}
+/* último filho do .wrap: no PC fica no canto de baixo à direita; no celular sobe (order:-1)
+   e fica à direita, logo acima do rótulo, sobre a parte limpa da foto */
+.luz{position:absolute;right:0;bottom:clamp(2.5rem,8vh,5.5rem);display:inline-flex;align-items:center;gap:.75rem;
+  padding:.45rem .5rem .45rem 1rem;border:1px solid rgba(255,253,249,.3);border-radius:99px;
+  background:rgba(15,14,12,.32);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  color:var(--branco);font:500 .7rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;cursor:pointer;
+  transition:border-color .3s ease,background .3s ease}
+.luz[hidden]{display:none}
+.luz:hover{border-color:rgba(255,253,249,.6);background:rgba(15,14,12,.45)}
+.luz:focus-visible{outline:2px solid var(--bronze-claro);outline-offset:3px}
+.luz__trilho{position:relative;width:40px;height:22px;border-radius:99px;background:rgba(255,253,249,.2);transition:background .5s ease}
+.luz__bola{position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:var(--branco);
+  transition:translate .45s var(--ease),box-shadow .6s ease}
+.luz[aria-pressed="true"] .luz__trilho{background:var(--bronze-claro)}
+.luz[aria-pressed="true"] .luz__bola{translate:18px 0;box-shadow:0 0 14px 3px rgba(255,210,150,.75)}
+.js .luz{opacity:0;translate:0 14px;animation:sobe 1.1s var(--ease) .9s forwards}
+.js:not(.luz-ok) .hero>picture:not(.luz-off){opacity:0}
+@media (max-width:700px){.luz{position:static;order:-1;align-self:flex-end;margin-bottom:1.1rem}}
+</style>
 </head>
 <body>
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
@@ -68,21 +102,6 @@
   <symbol id="i-fone" viewBox="0 0 24 24"><path d="M13.83 16.57a1 1 0 0 0 1.21-.3l.36-.47A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.47.35a1 1 0 0 0-.29 1.23 14 14 0 0 0 6.39 6.39"/></symbol>
   <symbol id="i-mail" viewBox="0 0 24 24"><path d="m22 7-8.99 5.73a2 2 0 0 1-2.02 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></symbol>
 </svg>
-
-<div class="intro" id="intro" aria-hidden="true">
-  <i class="intro__p c"></i><i class="intro__p f"></i><i class="intro__p e"></i><i class="intro__p d"></i>
-  <div class="intro__cena">
-    <span class="intro__grade"></span>
-    <div class="intro__conteudo">
-      <svg class="intro__marca" viewBox="0 0 366 398"><use href="#marca" width="366" height="398"/></svg>
-      <p class="intro__nome"><span>Denise</span> <span>Mota</span></p>
-      <span class="intro__linha"></span>
-      <p class="intro__lema">Arquitetura e interiores</p>
-    </div>
-    <span class="intro__pular">Pular abertura</span>
-  </div>
-  <span class="intro__moldura"></span>
-</div>
 
 <header class="topo" id="topo">
   <div class="wrap">
@@ -106,6 +125,9 @@
   <picture>
     <img src="assets/img/hero-1200.webp" srcset="assets/img/hero-1200.webp 1200w, assets/img/hero-2000.webp 2000w" sizes="100vw" alt="Fachada de uma casa contemporânea projetada por Denise Mota, com revestimento de pedra, palmeira e iluminação ao entardecer" fetchpriority="high">
   </picture>
+  <picture class="luz-off" aria-hidden="true">
+    <img src="assets/img/hero-apagada-1200.webp" srcset="assets/img/hero-apagada-1200.webp 1200w, assets/img/hero-apagada-2000.webp 2000w" sizes="100vw" alt="" fetchpriority="high">
+  </picture>
   <div class="wrap">
     <p class="rotulo entra">Arquitetura e interiores · Itabira, MG</p>
     <h1>Arquitetura que traduz<br class="so-desk"> <em>a sua essência</em><br class="so-desk"> em cada detalhe.</h1>
@@ -117,7 +139,9 @@
     <div class="selos entra">
       <a class="nota" href="https://maps.google.com/?cid=3645249256347178595" target="_blank" rel="noopener"><span class="estrelas" aria-hidden="true">★★★★★</span> 5,0 no Google, em 27 avaliações</a>
       <a class="nota" href="#reconhecimento"><span class="estrelas" aria-hidden="true">◆</span> Top of Mind 2026 em Itabira</a>
-    </div>  </div>
+    </div>
+    <button class="luz" id="luz" type="button" aria-pressed="false" hidden>Luzes<span class="luz__trilho" aria-hidden="true"><span class="luz__bola"></span></span></button>
+  </div>
 </section>
 
 <div class="palco">
@@ -527,46 +551,6 @@
     s.addEventListener('animationend', () => { s.style.willChange = 'auto'; }, { once: true });
   });
 
-  // abertura (só com html.com-intro, decidido no <head>). Espera a foto do topo
-  // carregar e um tempo mínimo; rede lenta não prende ninguém (sai em 4,3 s)
-  const intro = $('#intro');
-  if (intro && raiz.classList.contains('com-intro')) {
-    // a janela abre sempre no topo, mesmo se o navegador quiser devolver a rolagem antiga
-    try { history.scrollRestoration = 'manual'; } catch (e) {}
-    scrollTo(0, 0);
-    let saiu = false;
-    const sai = () => {
-      if (saiu) return; saiu = true;
-      try { sessionStorage.setItem('intro-denise', '1'); } catch (e) {}
-      const W = innerWidth, H = innerHeight, r = $('.intro__linha', intro).getBoundingClientRect();
-      const cx = r.left + r.width / 2, cy = r.top + r.height / 2, hw0 = Math.max(r.width / 2, 30);
-      const hwF = Math.max(cx, W - cx) + 2, hhF = Math.max(cy, H - cy) + 2;
-      const mol = $('.intro__moldura', intro), st = intro.style;
-      intro.classList.add('sai'); raiz.classList.add('intro-saindo');
-      const ei = (k) => k < .5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;
-      let t0 = null;
-      // a linha abre pros lados e depois pra cima e pra baixo, como uma janela
-      const passo = (t) => {
-        if (t0 === null) t0 = t;
-        const k = Math.min((t - t0) / 1500, 1);
-        const hw = hw0 + (hwF - hw0) * ei(Math.min(k / .5, 1)), hh = hhF * ei(Math.max(0, (k - .3) / .7));
-        st.setProperty('--t', Math.max(0, cy - hh) + 'px'); st.setProperty('--b', Math.max(0, H - cy - hh) + 'px');
-        st.setProperty('--l', Math.max(0, cx - hw) + 'px'); st.setProperty('--r', Math.max(0, W - cx - hw) + 'px');
-        mol.style.cssText = `left:${cx - hw}px;top:${cy - hh}px;width:${2 * hw}px;height:${2 * hh}px;opacity:${Math.min(1, (1 - k) / .25)}`;
-        if (k < 1) requestAnimationFrame(passo); else { raiz.classList.add('intro-fim'); intro.remove(); }
-      };
-      requestAnimationFrame(passo);
-    };
-    const foto = $('.hero img');
-    let fotoOk = !foto || foto.complete, tempoOk = false;
-    const tenta = () => { if (fotoOk && tempoOk) sai(); };
-    if (!fotoOk) ['load', 'error'].forEach((ev) => foto.addEventListener(ev, () => { fotoOk = true; tenta(); }));
-    setTimeout(() => { tempoOk = true; tenta(); }, Math.max(0, 2800 - performance.now()));
-    setTimeout(sai, Math.max(0, 4300 - performance.now()));
-    intro.addEventListener('click', sai);
-    addEventListener('keydown', (e) => { if (e.key === 'Escape') sai(); });
-  }
-
   // parallax: data-px (anda mais devagar ou mais rápido que a página), data-janela
   // (a imagem anda dentro da moldura, sem nunca mostrar borda) e data-gira (o selo).
   // Escreve nas propriedades translate e rotate, que animação de entrada não toca.
@@ -735,6 +719,27 @@
   }));
 
   $('#ano').textContent = new Date().getFullYear();
+})();
+
+// interruptor de luz. A fachada abre apagada e acende sozinha 1,8 s depois
+// que a foto apagada carregou; o clique cancela o automático.
+(() => {
+  const hero = document.querySelector('.hero'), bot = document.getElementById('luz'), raiz = document.documentElement;
+  if (!hero || !bot) return;
+  bot.hidden = false;
+  let auto = 0, manual = false;
+  const liga = (on) => { hero.classList.toggle('acesa', on); bot.setAttribute('aria-pressed', String(on)); };
+  bot.addEventListener('click', () => { manual = true; clearTimeout(auto); liga(!hero.classList.contains('acesa')); });
+  const libera = () => raiz.classList.add('luz-ok');
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) { libera(); liga(true); return; }
+  // se a versão apagada não carregar, a página fica acesa, que é o site de sempre
+  const off = hero.querySelector('.luz-off img');
+  const agenda = () => { libera(); if (!manual) auto = setTimeout(() => liga(true), 1800); };
+  if (!off || (off.complete && off.naturalWidth)) agenda();
+  else {
+    off.addEventListener('load', agenda);
+    off.addEventListener('error', () => { libera(); if (!manual) liga(true); });
+  }
 })();
 </script>
 </body>
