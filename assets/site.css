@@ -116,7 +116,7 @@ html.com-intro:not(.intro-fim) .intro{display:block;position:fixed;inset:0;z-ind
   animation:intro-traca 1.6s cubic-bezier(.55,.1,.3,1) .1s forwards,intro-enche .9s ease 1.3s forwards}
 .intro__nome{margin:0;font:400 clamp(3.3rem,13vw,10rem)/.95 var(--serif);letter-spacing:-.005em;white-space:nowrap}
 .intro__nome span{display:inline-block;padding:.02em .05em .12em;color:transparent;-webkit-text-fill-color:transparent;
-  background:var(--bronze-claro) url(assets/img/hero-1200.webp) no-repeat var(--x0,0%) 62%/190% auto;-webkit-background-clip:text;background-clip:text;
+  background:var(--bronze-claro) url(img/hero-1200.webp) no-repeat var(--x0,0%) 62%/190% auto;-webkit-background-clip:text;background-clip:text;
   -webkit-text-stroke:.6px rgba(195,160,122,.45);
   opacity:0;filter:blur(14px);translate:0 .2em;animation:intro-nome 1.4s var(--ease) .4s forwards,intro-pan 4.6s linear forwards}
 .intro__nome span:first-child{--x1:34%}
