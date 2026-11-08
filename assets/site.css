@@ -32,6 +32,9 @@ p{margin:0 0 1em}
 .btn:hover,.btn:focus-visible{transform:translateY(-2px);border-color:var(--bronze-claro);box-shadow:0 14px 30px -12px rgba(29,27,24,.55)}
 .btn:hover::before,.btn:focus-visible::before{left:130%}
 .btn--claro{background:var(--papel);color:var(--tinta);border-color:var(--papel)}
+/* verde do WhatsApp um tom mais fechado que o do Box5: com letra branca dá 4,8:1 (o #1daa61 dá 3:1) */
+.btn--zap{background:#11834a;color:#fff;border-color:#11834a;font-weight:500}
+.btn--zap:hover{background:#0e7340;border-color:#0e7340}
 .btn--vazado{background:transparent;color:inherit;border-color:currentColor}
 .btn--vazado:hover{background:rgba(255,255,255,.06)}
 
@@ -51,6 +54,27 @@ p{margin:0 0 1em}
 .topo:not(.solido) .nav .btn{background:transparent;border-color:rgba(255,255,255,.6);color:var(--branco)}
 .so-desk{display:inline}
 @media (max-width:900px){.nav a:not(.btn){display:none}.so-desk{display:none}}
+/* celular: os três risquinhos no lugar do "Fale", e o menu desce por baixo do cabeçalho
+   (modelo do Box5, 08/11/2026). Escuro sobre o topo, claro quando o cabeçalho já é sólido */
+.menu-btn{display:none}
+@media (max-width:900px){
+  .menu-btn{display:grid;place-content:center;gap:6px;width:44px;height:44px;margin-right:-10px;padding:0;border:0;background:none;color:inherit;cursor:pointer}
+  .menu-btn span{display:block;width:24px;height:1.5px;background:currentColor;transition:transform .3s var(--ease),opacity .2s ease}
+  .topo.menu-aberto .menu-btn span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+  .topo.menu-aberto .menu-btn span:nth-child(2){opacity:0}
+  .topo.menu-aberto .menu-btn span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+  .topo.menu-aberto:not(.solido){background:rgba(24,23,21,.97)}
+  .nav{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;
+    padding:.4rem var(--g) 1.4rem;background:rgba(24,23,21,.97);box-shadow:0 24px 40px -20px rgba(0,0,0,.6);
+    opacity:0;visibility:hidden;translate:0 -8px;transition:opacity .25s ease,translate .25s ease,visibility 0s linear .25s}
+  .topo.solido .nav{background:rgba(244,242,238,.98);box-shadow:0 1px 0 var(--linha),0 24px 40px -24px rgba(0,0,0,.25)}
+  .topo.menu-aberto .nav{opacity:1;visibility:visible;translate:0 0;transition:opacity .25s ease,translate .25s ease,visibility 0s}
+  .nav a:not(.btn){display:block;padding:1.05rem 0;border-bottom:1px solid rgba(255,253,249,.12);font-size:.8rem;opacity:1}
+  .topo.solido .nav a:not(.btn){border-bottom-color:var(--linha)}
+  .nav a:not(.btn)::after{display:none}
+  .nav .btn{margin-top:1.3rem;justify-content:center;padding:1rem 1.2rem;font-size:.75rem}
+  .nav .btn .so-desk{display:inline}
+}
 
 /* hero: fica parado enquanto o resto da página passa por cima */
 .hero{position:sticky;top:0;height:100vh;height:100svh;min-height:560px;overflow:hidden;color:var(--branco);background:var(--noite);z-index:0;--s:0}
